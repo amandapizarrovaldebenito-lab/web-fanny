@@ -1,10 +1,13 @@
+const i18n = window.FannyI18n;
+const t = i18n.t;
+
 const menuButton = document.querySelector("[data-menu-toggle]");
 const mainNav = document.querySelector("[data-main-nav]");
 
 if (menuButton && mainNav) {
   const closeMainMenu = (restoreFocus = false) => {
     menuButton.setAttribute("aria-expanded", "false");
-    menuButton.setAttribute("aria-label", "Open navigation");
+    i18n.setAttribute(menuButton, "aria-label", "ui.openMenu");
     mainNav.classList.remove("is-open");
     document.body.classList.remove("menu-open");
     mainNav.querySelectorAll("[data-nav-dropdown]").forEach((dropdown) => {
@@ -20,7 +23,7 @@ if (menuButton && mainNav) {
       closeMainMenu();
     } else {
       menuButton.setAttribute("aria-expanded", "true");
-      menuButton.setAttribute("aria-label", "Close navigation");
+      i18n.setAttribute(menuButton, "aria-label", "ui.closeMenu");
       mainNav.classList.add("is-open");
       document.body.classList.add("menu-open");
     }
@@ -200,7 +203,7 @@ document.querySelectorAll("[data-filter-group]").forEach((group) => {
       if (yearToggle) {
         yearToggle.classList.remove("is-active");
         yearToggle.setAttribute("aria-expanded", "false");
-        yearToggle.textContent = "Year";
+        i18n.setText(yearToggle, "ui.year");
       }
       yearDropdown?.classList.remove("is-open");
 
@@ -253,7 +256,7 @@ document.querySelectorAll("[data-year-filter]").forEach((dropdown) => {
         filterButton.setAttribute("aria-pressed", "false");
       });
       toggle?.classList.add("is-active");
-      if (toggle) toggle.textContent = `Year: ${year}`;
+      if (toggle) i18n.setText(toggle, "ui.yearValue", {year});
       targets.forEach((target) => {
         target.hidden = !(target.dataset.years || "").split(" ").includes(year);
       });
@@ -332,7 +335,7 @@ document.querySelectorAll("[data-thesis-filters]").forEach((filters) => {
     button.addEventListener("click", () => {
       activeStatus = button.dataset.thesisStatus;
       activeYear = "all";
-      if (yearLabel) yearLabel.textContent = "Year";
+      if (yearLabel) i18n.setText(yearLabel, "ui.year");
       yearToggle?.classList.remove("is-active");
       updateStatusButtons();
       closeYearDropdown();
@@ -359,7 +362,7 @@ document.querySelectorAll("[data-thesis-filters]").forEach((filters) => {
     button.addEventListener("click", () => {
       activeYear = button.dataset.thesisYear;
       activeStatus = "all";
-      if (yearLabel) yearLabel.textContent = activeYear === "all" ? "Year" : activeYear;
+      if (yearLabel) i18n.setText(yearLabel, activeYear === "all" ? "ui.chooseYear" : "ui.selectedYear", {year: activeYear});
       yearToggle?.classList.toggle("is-active", activeYear !== "all");
       updateStatusButtons();
       closeYearDropdown();
@@ -420,8 +423,8 @@ document.querySelectorAll("[data-publication-filters]").forEach((filters) => {
     });
 
     if (results) {
-      const noun = matchingCards.length === 1 ? "publication" : "publications";
-      results.textContent = `${matchingCards.length} ${noun}${matchingCards.length ? ` · Page ${currentPage} of ${totalPages}` : ""}`;
+      results.removeAttribute("data-i18n");
+      results.textContent = t(matchingCards.length === 1 ? "ui.publicationOne" : "ui.publicationMany", {count: i18n.formatNumber(matchingCards.length)}) + (matchingCards.length ? t("ui.pageOf", {page: i18n.formatNumber(currentPage), total: i18n.formatNumber(totalPages)}) : "");
     }
     if (emptyState) emptyState.hidden = matchingCards.length > 0;
 
@@ -434,7 +437,7 @@ document.querySelectorAll("[data-publication-filters]").forEach((filters) => {
         button.type = "button";
         button.textContent = label;
         button.disabled = Boolean(options.disabled);
-        button.setAttribute("aria-label", options.ariaLabel || `Page ${page}`);
+        button.setAttribute("aria-label", options.ariaLabel || t("ui.page", {page}));
         if (page === currentPage && !options.navigation) button.setAttribute("aria-current", "page");
         button.addEventListener("click", () => {
           currentPage = page;
@@ -449,13 +452,13 @@ document.querySelectorAll("[data-publication-filters]").forEach((filters) => {
 
       addPageButton("←", Math.max(1, currentPage - 1), {
         disabled: currentPage === 1,
-        ariaLabel: "Previous publication page",
+        ariaLabel: t("ui.previousPage"),
         navigation: true,
       });
       for (let page = 1; page <= totalPages; page += 1) addPageButton(String(page), page);
       addPageButton("→", Math.min(totalPages, currentPage + 1), {
         disabled: currentPage === totalPages,
-        ariaLabel: "Next publication page",
+        ariaLabel: t("ui.nextPage"),
         navigation: true,
       });
     }
@@ -504,11 +507,11 @@ document.querySelectorAll("[data-publication-filters]").forEach((filters) => {
       button.addEventListener("click", () => {
         if (button.dataset.publicationPeriod) {
           activePeriod = button.dataset.publicationPeriod;
-          filters.querySelector("[data-publication-period-label]").textContent = button.textContent.trim();
+          i18n.setText(filters.querySelector("[data-publication-period-label]"), activePeriod === "all" ? "ui.allDates" : "ui.recent");
         }
         if (button.dataset.publicationYear) {
           activeYear = button.dataset.publicationYear;
-          filters.querySelector("[data-publication-year-label]").textContent = activeYear === "all" ? "Year" : activeYear;
+          i18n.setText(filters.querySelector("[data-publication-year-label]"), activeYear === "all" ? "ui.chooseYear" : "ui.selectedYear", {year: activeYear});
         }
         currentPage = 1;
         closeDropdown(dropdown);
@@ -535,6 +538,7 @@ document.querySelectorAll("[data-publication-filters]").forEach((filters) => {
     });
   });
 
+  document.addEventListener("languagechange", applyPublicationFilters);
   applyPublicationFilters();
 });
 
@@ -544,6 +548,9 @@ document.querySelectorAll("[data-publication-toggle]").forEach((toggle) => {
     const expanded = toggle.getAttribute("aria-expanded") === "true";
     toggle.setAttribute("aria-expanded", String(!expanded));
     toggle.closest("[data-publication-card]")?.classList.toggle("is-expanded", !expanded);
+    i18n.setText(toggle.querySelector("[data-i18n]"), expanded ? "ui.showDetails" : "ui.hideDetails");
+    const icon = toggle.querySelector("[data-details-icon]");
+    if (icon) icon.src = `Imagenes/iconos/keyboard_arrow_${expanded ? "down" : "up"}_24dp_FFFFFF_FILL0_wght200_GRAD0_opsz24.svg`;
     if (details) details.hidden = expanded;
   });
 });
@@ -604,6 +611,8 @@ document.querySelectorAll("[data-reveal-toggle]").forEach((toggle) => {
     const nextExpanded = !expanded;
 
     toggle.setAttribute("aria-expanded", String(nextExpanded));
+    const revealIcon = toggle.querySelector("[data-reveal-icon]");
+    if (revealIcon) revealIcon.src = `Imagenes/iconos/keyboard_arrow_${nextExpanded ? "up" : "down"}_24dp_A92B32_FILL0_wght200_GRAD0_opsz24.svg`;
     items.forEach((item) => {
       item.hidden = !nextExpanded;
       item.classList.toggle("is-filtered-out", !nextExpanded);
@@ -611,18 +620,32 @@ document.querySelectorAll("[data-reveal-toggle]").forEach((toggle) => {
     });
 
     if (label) {
-      label.textContent = nextExpanded ? label.dataset.lessLabel : label.dataset.moreLabel;
+      i18n.setText(label, label.getAttribute(nextExpanded ? "data-i18n-data-less-label" : "data-i18n-data-more-label"));
     }
   });
 });
 
 document.querySelectorAll("[data-contact-form]").forEach((form) => {
   const status = form.querySelector("[data-form-status]");
+  const controls = [...form.querySelectorAll("input, select, textarea")];
+  const updateValidity = control => {
+    control.setCustomValidity("");
+    if (control.validity.valueMissing) control.setCustomValidity(t("ui.requiredField"));
+    else if (control.validity.typeMismatch) control.setCustomValidity(t("ui.invalidEmail"));
+    if (control.validity.valid) control.removeAttribute("aria-invalid");
+  };
+  controls.forEach(control => {
+    control.addEventListener("input", () => updateValidity(control));
+    control.addEventListener("change", () => updateValidity(control));
+    control.addEventListener("invalid", () => control.setAttribute("aria-invalid", "true"));
+    updateValidity(control);
+  });
+  document.addEventListener("languagechange", () => controls.forEach(updateValidity));
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     if (!form.reportValidity()) return;
     if (status) {
-      status.textContent = "El formulario está listo. Falta conectar un servicio de envío para procesar el mensaje.";
+      i18n.setText(status, "ui.formStatus");
       status.focus();
     }
   });
@@ -651,11 +674,12 @@ document.querySelectorAll("[data-contact-form]").forEach((form) => {
 
     image.src = trigger.dataset.lightboxSrc || thumbnail?.src || "";
     image.alt = thumbnail?.alt || "";
-    title.textContent = trigger.dataset.lightboxTitle || "Preliminary result";
+    title.textContent = trigger.dataset.lightboxTitle || t("ui.preliminaryResult");
     description.textContent = trigger.dataset.lightboxDescription || "";
     counter.textContent = `${currentIndex + 1} / ${triggers.length}`;
   };
 
+  document.addEventListener("languagechange", () => { if (!lightbox.hidden) renderResult(currentIndex); });
   const showPrevious = () => renderResult(currentIndex - 1);
   const showNext = () => renderResult(currentIndex + 1);
 
@@ -724,5 +748,178 @@ document.querySelectorAll("[data-contact-form]").forEach((form) => {
       event.preventDefault();
       dialog?.focus();
     }
+  });
+})();
+/* Mobile filter adapter: commit through the existing desktop controllers. */
+(() => {
+  const mobile = window.matchMedia('(max-width: 500px)');
+  const definitions = [
+    {root: '[data-publication-filters]', name: 'ui.publications', cards: '[data-publication-card]', combined: true,
+      fields: [['ui.type','publicationType'], ['ui.period','publicationPeriod'], ['ui.year','publicationYear']]},
+    {root: '.projects-filters[data-filter-group]', name: 'ui.projects', cards: '[data-project-card]',
+      fields: [['ui.projectStatus','filter',['all','current','completed']], ['ui.year','projectYear'], ['ui.location','filter',['international']]]},
+    {root: '[data-collaborator-filters]', name: 'ui.collaborators', cards: '[data-collaborator]',
+      fields: [['ui.collaboratorStatus','collaboratorFilter',['all','active','inactive']], ['ui.location','collaboratorFilter',['national','international']]]},
+    {root: '[data-thesis-filters]', name: 'ui.assistants', cards: '[data-thesis-student]',
+      fields: [['ui.assistantStatus','thesisStatus'], ['ui.year','thesisYear']]},
+  ];
+  const make = (tag, className, text) => {
+    const element = document.createElement(tag);
+    if (className) element.className = className;
+    if (text) {
+      if (text.startsWith('ui.')) i18n.setText(element, text);
+      else element.textContent = text;
+    }
+    return element;
+  };
+  definitions.forEach((definition, index) => {
+    const root = document.querySelector(definition.root);
+    if (!root) return;
+    const section = root.closest('section');
+    const fields = definition.fields.map(([label, key, values]) => {
+      const buttons = [...root.querySelectorAll('button')].filter(button =>
+        button.dataset[key] !== undefined && (!values || values.includes(button.dataset[key])));
+      return {label, key, buttons};
+    });
+    let committed = fields.map(() => 'all');
+    let draft = [...committed];
+    let replaying = false;
+    root.classList.add('desktop-filter-controls');
+    const shell = make('div', 'mobile-filters');
+    shell.setAttribute('aria-label', t('ui.filtersFor', {section: t(definition.name)}));
+    const toggle = make('button', 'mobile-filter-toggle');
+    toggle.type = 'button';
+    // Google Material Symbols Outlined: tune (local SVG, no font dependency).
+    toggle.innerHTML = '<svg viewBox="0 -960 960 960" width="24" height="24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M440-120v-240h80v80h320v80H520v80h-80ZM120-200v-80h240v80H120Zm160-160v-80H120v-80h160v-80h80v240h-80Zm160-80v-80h400v80H440Zm160-160v-240h80v80h160v80H680v80h-80ZM120-680v-80h400v80H120Z"/></svg>';
+    const caption = make('span');
+    const arrow = make('img', 'mobile-filter-arrow');
+    const arrowPath = direction => `Imagenes/iconos/keyboard_arrow_${direction}_24dp_FFFFFF_FILL0_wght200_GRAD0_opsz24.svg`;
+    arrow.src = arrowPath('down');
+    arrow.alt = '';
+    new MutationObserver(() => {
+      arrow.src = arrowPath(toggle.getAttribute('aria-expanded') === 'true' ? 'up' : 'down');
+    }).observe(toggle, {attributes: true, attributeFilter: ['aria-expanded']});
+    arrow.setAttribute('aria-hidden','true');
+    toggle.append(caption, arrow);
+    const panel = make('div', 'mobile-filter-panel');
+    panel.id = `mobile-filter-panel-${index}`;
+    panel.hidden = true;
+    toggle.setAttribute('aria-controls', panel.id);
+    toggle.setAttribute('aria-expanded','false');
+    const selects = fields.map((field, i) => {
+      const label = make('label', 'mobile-filter-field');
+      label.append(make('span', '', field.label));
+      const select = make('select');
+      i18n.setAttribute(select, 'aria-label', field.label);
+      const allButton = field.buttons.find(button => button.dataset[field.key] === 'all');
+      const allOption = new Option('', 'all');
+      i18n.setText(allOption, allButton?.dataset.i18n || (field.key.toLowerCase().includes('year') ? 'ui.allYears' : 'ui.all'));
+      select.append(allOption);
+      field.buttons.filter(button => button.dataset[field.key] !== 'all').forEach(button => {
+        const option = new Option(button.textContent.trim(), button.dataset[field.key]);
+        const key = button.dataset.i18n || button.querySelector('[data-i18n]')?.dataset.i18n;
+        if (key) i18n.setText(option, key);
+        select.append(option);
+      });
+      select.addEventListener('change', () => {
+        if (!definition.combined && select.value !== 'all') draft = fields.map(() => 'all');
+        draft[i] = select.value;
+        syncDraft();
+      });
+      label.append(select); panel.append(label);
+      return select;
+    });
+    if (!definition.combined) panel.append(make('p','mobile-filter-help','ui.replaceCriterion'));
+    const actions = make('div', 'mobile-filter-actions');
+    const clear = make('button', 'btn btn-secondary', 'ui.clearFilters');
+    const apply = make('button', 'btn btn-primary', 'ui.applyFilters');
+    clear.type = apply.type = 'button';
+    actions.append(clear, apply); panel.append(actions);
+    const chips = make('div', 'mobile-filter-chips');
+    i18n.setAttribute(chips, 'aria-label', 'ui.activeFilters');
+    const status = make('p', 'mobile-filter-status');
+    status.setAttribute('role','status');
+    shell.append(toggle, panel, chips, status); root.before(shell);
+    const cards = [...section.querySelectorAll(definition.cards)];
+    const existingEmpty = section.querySelector('[data-publication-empty], [data-collaborator-empty]');
+    const empty = existingEmpty || make('p', 'filter-empty-state', definition.name === 'ui.projects' ? 'ui.emptyProjects' : 'ui.emptyAssistants');
+    if (!existingEmpty) { empty.hidden = true; empty.setAttribute('role','status'); root.after(empty); }
+    function updateResults() {
+      const results = root.querySelector('[data-publication-results]');
+      const count = cards.filter(card => !card.hidden).length;
+      status.textContent = results?.textContent || t('ui.resultsShown', {count: i18n.formatNumber(count)});
+      if (!existingEmpty) empty.hidden = count > 0;
+    }
+    function syncDraft() { selects.forEach((select, i) => { select.value = draft[i]; }); }
+    function close(focus = false) {
+      panel.hidden = true; toggle.setAttribute('aria-expanded','false');
+      if (focus) toggle.focus();
+    }
+    function render() {
+      caption.textContent = t('ui.filters', {count: committed.filter(value => value !== 'all').length});
+      chips.replaceChildren();
+      committed.forEach((value, i) => {
+        if (value === 'all') return;
+        const text = fields[i].buttons.find(button => button.dataset[fields[i].key] === value)?.textContent.trim() || value;
+        const chip = make('button', 'mobile-filter-chip', `${t(fields[i].label)}: ${text} ×`);
+        chip.type = 'button'; chip.setAttribute('aria-label', t('ui.removeFilter', {label: t(fields[i].label), value: text}));
+        chip.addEventListener('click', () => { draft = [...committed]; draft[i] = 'all'; commit(); toggle.focus(); });
+        chips.append(chip);
+      });
+      syncDraft(); updateResults();
+    }
+    function commit() {
+      const next = [...draft];
+      replaying = true;
+      // Existing listeners own matching, selection styles, reveal controls and pagination.
+      if (definition.combined) {
+        fields.forEach((field, i) => field.buttons.find(button => button.dataset[field.key] === next[i])?.click());
+      } else {
+        const active = next.findIndex(value => value !== 'all');
+        if (active < 0) fields[0].buttons.find(button => button.dataset[fields[0].key] === 'all')?.click();
+        else fields[active].buttons.find(button => button.dataset[fields[active].key] === next[active])?.click();
+      }
+      replaying = false;
+      committed = next; draft = [...next]; render(); close(true);
+    }
+    toggle.addEventListener('click', () => {
+      panel.hidden = !panel.hidden;
+      toggle.setAttribute('aria-expanded', String(!panel.hidden));
+    });
+    panel.addEventListener('keydown', event => {
+      if (event.key === 'Escape') { event.preventDefault(); close(true); }
+    });
+    clear.addEventListener('click', () => { draft = fields.map(() => 'all'); syncDraft(); });
+    apply.addEventListener('click', commit);
+    root.addEventListener('click', event => {
+      if (replaying) return;
+      const button = event.target.closest('button');
+      if (!button) return;
+      const i = fields.findIndex(field => field.buttons.includes(button));
+      if (i < 0) return;
+      if (!definition.combined) committed = fields.map(() => 'all');
+      committed[i] = button.dataset[fields[i].key];
+      draft = [...committed]; render();
+    });
+    // Keep the mobile result announcement in sync with pagination and Show more.
+    const observer = new MutationObserver(updateResults);
+    cards.forEach(card => observer.observe(card, {attributes:true, attributeFilter:['hidden']}));
+    const resultText = root.querySelector('[data-publication-results]');
+    if (resultText) observer.observe(resultText, {childList:true, subtree:true, characterData:true});
+    mobile.addEventListener('change', () => {
+      const focused = shell.contains(document.activeElement);
+      draft = [...committed]; close(); render();
+      root.querySelectorAll('.is-open').forEach(dropdown => {
+        dropdown.classList.remove('is-open');
+        dropdown.querySelector('[aria-expanded]')?.setAttribute('aria-expanded','false');
+      });
+      if (focused && !mobile.matches) root.querySelector('button')?.focus();
+      else if (mobile.matches && root.contains(document.activeElement)) toggle.focus();
+    });
+    document.addEventListener('languagechange', () => {
+      shell.setAttribute('aria-label', t('ui.filtersFor', {section: t(definition.name)}));
+      render();
+    });
+    render();
   });
 })();
