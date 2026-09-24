@@ -1,0 +1,1303 @@
+{
+  "source": "auditoria_keywords_codex_fanny.xlsx",
+  "sheet": "Acciones Codex",
+  "sha256": "6cc6cc93f43d371d7151609f657a4a36e6e2f5f504d0a23457b821ed1e169497",
+  "publications": [
+    {
+      "id": "2026-01",
+      "doi": "10.4067/s0034-98872026000300373",
+      "title": "Sarcopenia in the Metropolitan Region of Chile: Cross-Sectional Findings from the Chilean National Health Survey 2016–2017",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Aged",
+        "Hand Strength",
+        "Muscle, Skeletal",
+        "Sarcopenia"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2026-02",
+      "doi": "10.4067/s0034-98872026000100142",
+      "title": "Diabetes en el embarazo y neurodesarrollo: Un llamado urgente a la acción",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2026-03",
+      "doi": "10.1016/j.amepre.2026.108302",
+      "title": "Leisure-Time Physical Activity Is Associated With Reduced Risks of Mortality in Adults With General or Abdominal Obesity in Mexico",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2026-04",
+      "doi": "10.1159/000551081",
+      "title": "Trends in Socioeconomic Inequalities of Dental Caries Experience among 12-Year-Olds in Chile: An Ecological Cohort Study",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Dental Caries",
+        "Adolescents",
+        "Socioeconomic Inequalities",
+        "Dental Public Health"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2026-05",
+      "doi": "10.64159/rchnut-53-1-8",
+      "title": "¿Cuál es la efectividad de una intervención basada en la dieta para modificar el perfil de lípidos séricos y el estado nutricional en mujeres con cáncer de mama? Un estudio piloto aleatorizado",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Cáncer de mama",
+        "Triglicéridos",
+        "Colesterol total",
+        "Obesidad",
+        "Dieta"
+      ],
+      "sourceLanguages": [
+        "es",
+        "es",
+        "es",
+        "es",
+        "es"
+      ]
+    },
+    {
+      "id": "2026-06",
+      "doi": "10.1016/s2468-1253(26)00011-7",
+      "title": "Global burden of metabolic dysfunction-associated steatotic liver disease, 1990–2023, and projections to 2050: a systematic analysis for the Global Burden of Disease Study 2023",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2026-07",
+      "doi": "10.1038/s41591-026-04250-8",
+      "title": "Global, regional and national burden of ischemic heart disease attributable to suboptimal diet, 1990–2023: a Global Burden of Disease study",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2026-08",
+      "doi": "10.1016/s2352-4642(25)00303-7",
+      "title": "Quantifying the fatal and non-fatal burden of disease associated with child growth failure, 2000–2023: a systematic analysis from the Global Burden of Disease Study 2023",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2025-01",
+      "doi": "10.1111/dom.70260",
+      "title": "How would the use of Semaglutide impact the Chilean population? An estimated analysis following the SELECT trial approach",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Semaglutide",
+        "obesity therapy",
+        "type 2 diabetes",
+        "weight control"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2025-02",
+      "doi": "10.1016/j.amepre.2025.02.005",
+      "title": "Leisure-Time Physical Activity and Obesity Risk in Adults in Mexico",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2025-03",
+      "doi": "10.1111/dom.16644",
+      "title": "Diabetes is one of the main drivers of mortality in Mexico: A latent class analysis of chronic diseases using the Mexico City Prospective Study",
+      "status": "Verificadas",
+      "action": "MANTENER",
+      "originalKeywords": [
+        "Mortality",
+        "Diabetes",
+        "Multimorbidity"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2025-05",
+      "doi": "10.1136/bjsports-2024-108460",
+      "title": "Associations of the ‘weekend warrior’ physical activity pattern with mild dementia: findings from the Mexico City Prospective Study",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Aging",
+        "Brain",
+        "Cohort Studies",
+        "Exercise",
+        "Sports"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2024-01",
+      "doi": "10.1038/s41467-024-51314-9",
+      "title": "Diet modifies the association between alcohol consumption and severe alcohol-related liver disease incidence",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2024-02",
+      "doi": "10.1111/obr.13784",
+      "title": "Bibliometric analysis of research on sarcopenic obesity: a review of scientific literature",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "adiposity",
+        "obesity",
+        "sarcopenia",
+        "sarcopenic obesity"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2024-03",
+      "doi": "10.1017/s1368980023002598",
+      "title": "Association between a lifestyle score and all-cause mortality: a prospective analysis of the Chilean National Health Survey 2009–2010",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Lifestyle",
+        "prospective study",
+        "mortality"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2024-04",
+      "doi": "10.1111/dom.15378",
+      "title": "Association of five diet scores with severe NAFLD incidence: A prospective study from UK Biobank",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "diet",
+        "incidence",
+        "non-alcoholic fatty liver disease"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2024-05",
+      "doi": "10.1111/dom.15528",
+      "title": "Associations of diabesity with all‐cause and cardiovascular disease mortality: Findings from the Mexico City Prospective Study",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "diabetes",
+        "mortality",
+        "obesity",
+        "cardiovascular diseases"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2024-06",
+      "doi": "10.1016/j.nut.2024.112499",
+      "title": "Anthropometric evaluation through images: Findings from the SCANNER software package",
+      "status": "Verificadas",
+      "action": "MANTENER",
+      "originalKeywords": [
+        "Anthropometry",
+        "Software",
+        "Waist-height ratio"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2024-07",
+      "doi": "10.4067/s0034-98872024000500643",
+      "title": "Disponibilidad y seguridad hídrica en el desarrollo de enfermedades crónicas no transmisibles ¿Nuevos factores de riesgo?",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2024-08",
+      "doi": "10.1016/j.jacadv.2024.100944",
+      "title": "The Use of Life’s Essential 8 as a Prediction Model and Beyond",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "cardiovascular disease",
+        "Life’s Essential 8",
+        "Life’s Simple 7",
+        "mortality",
+        "risk prediction"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2023-01",
+      "doi": "10.3390/nu15194303",
+      "title": "Folic Acid Supplementation during Pregnancy and Its Association with Telomere Length in Children at Four Years: Results from the INMA Birth Cohort Study",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "child",
+        "folic acid supplementation",
+        "pregnancy",
+        "telomere length"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2023-02",
+      "doi": "10.1016/j.cpcardiol.2023.101934",
+      "title": "Association Between the AHA Life's Essential 8 Score and Incident All-Cause Dementia: A Prospective Cohort Study from UK Biobank",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2023-03",
+      "doi": "10.3390/nu15163587",
+      "title": "Vegetarians: Past, Present, and Future Regarding Their Diet Quality and Nutritional Status",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2023-04",
+      "doi": "10.1186/s12916-023-02793-y",
+      "title": "Associations between an inflammatory diet index and severe non-alcoholic fatty liver disease: a prospective study of 171,544 UK Biobank participants",
+      "status": "Verificadas",
+      "action": "MANTENER",
+      "originalKeywords": [
+        "diet",
+        "inflammation",
+        "prospective studies",
+        "non-alcoholic fatty liver disease",
+        "incidence"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2023-05",
+      "doi": "10.1016/j.maturitas.2022.11.004",
+      "title": "The association between walking pace and grip strength and all-cause mortality: A prospective analysis from the MAUCO cohort",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Ageing",
+        "Grip strength",
+        "Mortality",
+        "Walking pace"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2023-06",
+      "doi": "10.1016/j.clnu.2023.01.010",
+      "title": "Do all vegetarians have a lower cardiovascular risk? A prospective study",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Vegetarians",
+        "Cardiovascular diseases",
+        "Western diet",
+        "Incidence"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2023-07",
+      "doi": "10.1016/j.cpcardiol.2022.101540",
+      "title": "An Opportunity for Prevention: Associations Between the Life's Essential 8 Score and Cardiovascular Incidence Using Prospective Data from UK Biobank",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2023-08",
+      "doi": "10.14306/renhyd.27.3.1975",
+      "title": "Desafíos alimentarios para un mundo que envejece",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Envejecimiento",
+        "Alimentación",
+        "Dieta"
+      ],
+      "sourceLanguages": [
+        "es",
+        "es",
+        "es"
+      ]
+    },
+    {
+      "id": "2023-09",
+      "doi": "10.3390/ijerph20042798",
+      "title": "Hygiene Practices and Early Childhood Development in the East Asia-Pacific Region: A Cross-Sectional Analysis",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "hand hygiene",
+        "oral hygiene",
+        "child",
+        "growth and development",
+        "East Asia-Pacific region"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2023-10",
+      "doi": "10.1016/j.jhep.2023.08.014",
+      "title": "Reply to: “Defining severe NAFLD based on ICD codes in large cohorts: Balancing feasibility and limitations”",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2023-11",
+      "doi": "10.11565/arsmed.v48i4.2022",
+      "title": "Reflexiones sobre la tuberculosis en Chile: avances y compromisos futuros",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2023-12",
+      "doi": "10.4067/s0034-98872023001001416",
+      "title": "Contaminación por partículas en Chile: ¿Cuál es su asociación con enfermedades cardiovasculares?",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2022-01",
+      "doi": "10.1038/s41390-022-02255-w",
+      "title": "Children who sleep more may have longer telomeres: evidence from a longitudinal population study in Spain",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Child",
+        "Telomere length",
+        "Sleep",
+        "Lifestyle"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2022-02",
+      "doi": "10.1016/j.jhep.2022.07.023",
+      "title": "Reply to: “Associations of muscle mass and grip strength with severe NAFLD: A prospective study of 333,295 UK Biobank participants”",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2022-03",
+      "doi": "10.1002/jcsm.12783",
+      "title": "Global prevalence of sarcopenia and severe sarcopenia: a systematic review and meta‐analysis",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Meta-analysis",
+        "Prevalence",
+        "Sarcopenia",
+        "Systematic review"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2022-04",
+      "doi": "10.1001/jamanetworkopen.2021.42458",
+      "title": "Weight-for-Height, Body Fat, and Development in Children in the East Asia and Pacific Region",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2022-05",
+      "doi": "10.1016/j.jhep.2022.01.010",
+      "title": "Associations of muscle mass and grip strength with severe NAFLD: A prospective study of 333,295 UK Biobank participants",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "NAFLD",
+        "Grip strength",
+        "Sarcopenia",
+        "Muscle skeletal",
+        "Metabolic",
+        "NASH"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2022-07",
+      "doi": "10.4067/s0034-98872022000801075",
+      "title": "Fuerza de prensión manual. Un sencillo, pero fuerte predictor de salud en población adulta y personas mayores",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Aged",
+        "Muscle Strength",
+        "Muscle Weakness",
+        "Public Health"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2022-10",
+      "doi": "10.4067/s0034-98872022001201691",
+      "title": "En búsqueda de una salud sostenible en Chile: rol de la investigación interdisciplinaria",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2022-18",
+      "doi": "10.3390/ijerph192013690",
+      "title": "Physical Fitness, Screen Time and Sleep Habits According to Obesity Levels in Schoolchildren: Findings from the Health Survey of the Extreme South of Chile",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Body Mass Index",
+        "body composition",
+        "healthy weight-obese",
+        "physical fitness",
+        "screen time",
+        "sleeping habits"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2022-22",
+      "doi": "10.1017/s1368980021004869",
+      "title": "A healthy eating score is inversely associated with depression in older adults: results from the Chilean National Health Survey 2016–2017",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Dietary pattern",
+        "Aged",
+        "Health",
+        "Depression",
+        "Latin America"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2021-01",
+      "doi": "10.4067/s0034-98872021001101679",
+      "title": "En busca de la armonización de datos en salud: una tarea pendiente",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2021-02",
+      "doi": "10.1002/jcsm.12757",
+      "title": "Association of sarcopenia with incident osteoporosis: a prospective study of 168,682 UK biobank participants",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Muscle strength",
+        "Osteoporosis",
+        "Physical capability",
+        "Sarcopenia"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2021-03",
+      "doi": "10.1186/s12916-021-02172-5",
+      "title": "Dose-response association between device-measured physical activity and incident dementia: a prospective study from UK Biobank",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Accelerometer",
+        "Alzheimer’s disease",
+        "Dementia",
+        "Physical activity"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2021-04",
+      "doi": "10.1016/j.mayocp.2021.01.036",
+      "title": "Nonlinear Associations Between Cumulative Dietary Risk Factors and Cardiovascular Diseases, Cancer, and All-Cause Mortality: A Prospective Cohort Study From UK Biobank",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2021-05",
+      "doi": "10.1016/j.clnu.2021.03.030",
+      "title": "Sarcopenic obesity and its association with respiratory disease incidence and mortality – Authors’ reply",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2021-06",
+      "doi": "10.1016/s2666-7568(21)00008-8",
+      "title": "Associations between physical frailty and dementia incidence: a prospective study from UK Biobank – Authors' reply",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2021-07",
+      "doi": "10.1093/pubmed/fdaa226",
+      "title": "Frailty, sarcopenia, cachexia and malnutrition as comorbid conditions and their associations with mortality: a prospective study from UK Biobank",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "cachexia",
+        "frailty",
+        "malnutrition",
+        "mortality",
+        "sarcopenia"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2020-01",
+      "doi": "10.1093/eurheartj/ehaa939",
+      "title": "Vegetarians, fish, poultry, and meat-eaters: who has higher risk of cardiovascular disease incidence and mortality? A prospective study from UK Biobank",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Cardiovascular diseases",
+        "Incidence",
+        "Meat",
+        "Mortality",
+        "Vegetarians"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2020-02",
+      "doi": "10.1186/s12916-020-01822-4",
+      "title": "Comparison of two different frailty measurements and risk of hospitalisation or death from COVID-19: findings from UK Biobank",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2020-03",
+      "doi": "10.1016/j.jamda.2020.05.005",
+      "title": "Biomarkers Profile of People With Sarcopenia: A Cross-sectional Analysis From UK Biobank",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Sarcopenia",
+        "biomarkers",
+        "handgrip strength",
+        "muscle weakness"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2020-04",
+      "doi": "10.1017/s1368980020001469",
+      "title": "Optimal cut-off points for waist circumference in the definition of metabolic syndrome in Chile",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Central obesity",
+        "Metabolic syndrome",
+        "Waist circumference"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2020-05",
+      "doi": "10.1016/j.nut.2020.110932",
+      "title": "Is waist-to-height ratio a better predictor of hypertension and type 2 diabetes than body mass index and waist circumference in the Chilean population?",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Cardiovascular diseases",
+        "Chronic disease",
+        "Morbidity",
+        "Obesity",
+        "Risk factors"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2020-06",
+      "doi": "10.1016/j.maturitas.2020.04.017",
+      "title": "Physical capability markers used to define sarcopenia and their association with cardiovascular and respiratory outcomes and all-cause mortality: A prospective study from UK Biobank",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "EWGSOP2",
+        "Incidence",
+        "Mortality",
+        "Muscle strength"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2020-07",
+      "doi": "10.1016/j.clnu.2020.03.006",
+      "title": "Sarcopenic obesity and its association with respiratory disease incidence and mortality",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Obesity",
+        "Respiratory disease",
+        "Respiratory mortality",
+        "Sarcopenia"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2020-08",
+      "doi": "10.1016/j.maturitas.2020.01.004",
+      "title": "Factors associated with sarcopenia: A cross-sectional analysis using UK Biobank",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "EWGSOP2",
+        "Lifestyle",
+        "Risk factors",
+        "Sarcopenia"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2020-09",
+      "doi": "10.4067/s0717-75182020000200299",
+      "title": "Desde una mirada global al contexto chileno: ¿Qué factores han repercutido en el desarrollo de obesidad en Chile? (Parte 1)",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Adiposidad",
+        "Factores de Riesgo",
+        "FTO",
+        "Obesidad"
+      ],
+      "sourceLanguages": [
+        "es",
+        "es",
+        "en",
+        "es"
+      ]
+    },
+    {
+      "id": "2020-10",
+      "doi": "10.1016/j.clnu.2020.10.044",
+      "title": "The joint association of sarcopenia and frailty with incidence and mortality health outcomes: A prospective study",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Frailty",
+        "Morbidity",
+        "Mortality",
+        "Sarcopenia"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2020-11",
+      "doi": "10.1016/s2666-7568(20)30007-6",
+      "title": "Associations between physical frailty and dementia incidence: a prospective study from UK Biobank",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2020-12",
+      "doi": "10.1371/journal.pone.0241824",
+      "title": "Is older age associated with COVID-19 mortality in the absence of other risk factors? General population cohort study of 470,034 participants",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2020-13",
+      "doi": "10.4067/s0034-98872020001101598",
+      "title": "Prevalencia de debilidad muscular en personas mayores chilenas: resultados de la Encuesta Nacional de Salud 2016-2017",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Chile",
+        "Frail Elderly",
+        "Hand Strength",
+        "Frailty"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2020-14",
+      "doi": "10.4067/s0034-98872020001201750",
+      "title": "Fitness cardiorrespiratorio estimado mediante ecuación y su caracterización sociodemográfica en población chilena: Resultados de la Encuesta Nacional de Salud 2016-2017",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Cardiorespiratory Fitness",
+        "Aging",
+        "Obesity",
+        "Social Environment"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2020-15",
+      "doi": "10.4067/s0034-98872020001201863",
+      "title": "Una dieta antiinflamatoria disminuiría el riesgo de mortalidad por todas las causas",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2019-01",
+      "doi": "10.1093/ageing/afz126",
+      "title": "New versus old guidelines for sarcopenia classification: What is the impact on prevalence and health outcomes?",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "European Working Group on Sarcopenia in Older People (EWGSOP)",
+        "incidence",
+        "mortality",
+        "muscle strength",
+        "older people",
+        "sarcopenia"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2019-02",
+      "doi": "10.4067/s0034-98872019000800965",
+      "title": "Asociación del polimorfismo rs7903146, del gen TCF7L2, con marcadores de adiposidad y metabólicos en población chilena - resultados del estudio GENADIO",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Adiposity",
+        "Biomarkers",
+        "Diabetes Mellitus, Type 2",
+        "Genetics",
+        "Transcription Factor 7-Like 2 Protein"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2019-03",
+      "doi": "10.4067/s0034-98872019000600733",
+      "title": "¿Existe asociación entre asma y adiposidad en la población adulta chilena?",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Adiposity",
+        "Asthma",
+        "Obesity",
+        "Respiratory Tract Diseases"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2019-04",
+      "doi": "10.1080/02640414.2019.1647738",
+      "title": "Association of leisure time and occupational physical activity with obesity and cardiovascular risk factors in Chile",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Occupational physical activity",
+        "leisure physical activity",
+        "obesity",
+        "type 2 diabetes",
+        "hypertension"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2019-05",
+      "doi": "10.1017/s1368980018003889",
+      "title": "Sociodemographic patterns of urine sodium excretion and its association with hypertension in Chile: a cross-sectional analysis",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Hypertension",
+        "Sodium excretion",
+        "Lifestyle",
+        "Risk factors"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2019-06",
+      "doi": "10.4067/s0717-75182019000300264",
+      "title": "¿Cuál es la prevalencia de obesidad metabólicamente saludable en población chilena?",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Enfermedades cardiovasculares",
+        "Obesidad",
+        "Obesidad metabólicamente saludable",
+        "Perfil metabólico"
+      ],
+      "sourceLanguages": [
+        "es",
+        "es",
+        "es",
+        "es"
+      ]
+    },
+    {
+      "id": "2019-07",
+      "doi": "10.4067/s0718-48162019000100009",
+      "title": "Los problemas auditivos aumentan el riesgo de deterioro cognitivo en adultos mayores chilenos",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Envejecimiento",
+        "Pruebas de estado mental y demencia",
+        "Pérdida auditiva",
+        "Deterioro cognitivo"
+      ],
+      "sourceLanguages": [
+        "es",
+        "es",
+        "es",
+        "es"
+      ]
+    },
+    {
+      "id": "2018-01",
+      "doi": "10.4067/s0034-98872018000800872",
+      "title": "Asociación entre diabetes mellitus tipo 2, historia familiar de diabetes y deterioro cognitivo en adultos mayores chilenos",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Aged",
+        "Cognitive Dysfunction",
+        "Dementia",
+        "Diabetes Mellitus"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2018-02",
+      "doi": "10.4067/s0717-75182018000400293",
+      "title": "Consumo de carnes rojas y su asociación con mortalidad",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2018-03",
+      "doi": "10.4067/s0034-98872018000600717",
+      "title": "Asociación entre el polimorfismo rs9939609 del gen FTO y marcadores de adiposidad en población adulta chilena",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Adiposity",
+        "Alpha-Ketoglutarate-Dependent Dioxygenase FTO",
+        "Genotype",
+        "Obesity"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2018-04",
+      "doi": "10.4067/s0034-98872018000400433",
+      "title": "Tiempo destinado a estar sentado y niveles de adiposidad ¿Cuál es su efecto sobre el desarrollo de diabetes mellitus tipo 2?",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Diabetes Mellitus, Type 2",
+        "Obesity",
+        "Sedentary Lifestyle"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2018-05",
+      "doi": "10.1016/j.rmclc.2017.10.013",
+      "title": "EL TRANSPORTE ACTIVO: podría reducir hasta en un 40% el riesgo de desarollar cáncer, enfermedades cardiovasculares y mortalidad prematura",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2018-06",
+      "doi": "10.1016/j.gaceta.2017.09.008",
+      "title": "Asociación entre diabetes mellitus tipo 2 y actividad física en personas con antecedentes familiares de diabetes",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Diabetes mellitus tipo 2",
+        "Obesidad",
+        "Ejercicio",
+        "Actividad física",
+        "Adiposidad"
+      ],
+      "sourceLanguages": [
+        "es",
+        "es",
+        "es",
+        "es",
+        "es"
+      ]
+    },
+    {
+      "id": "2018-07",
+      "doi": "10.4067/s0717-75182018000300183",
+      "title": "El consumo de frutas y verduras se asocia a menor mortalidad: 5 porciones al día es bueno, ¡pero 10 serían mejor!",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2018-08",
+      "doi": "10.4067/s0717-75182018000100089",
+      "title": "Repetido, pero cierto: Una alimentación saludable es la clave para una mejor salud",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2018-09",
+      "doi": "10.4067/s0717-75182018000100091",
+      "title": "Inactividad física y obesidad ¿cuál es su repercusión en el gasto económico de diabetes mellitus 2 en Chile?",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2017-01",
+      "doi": "10.4067/s0034-98872017000800996",
+      "title": "Factores de riesgo asociados al desarrollo de hipertensión arterial en Chile",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Diet",
+        "Exercise",
+        "Hypertension",
+        "Lyfe Style",
+        "Obesity"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2017-02",
+      "doi": "10.4067/s0034-98872017000600716",
+      "title": "Factores asociados al desarrollo de obesidad en Chile: resultados de la Encuesta Nacional de Salud 2009-2010",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Body Mass Index",
+        "Obesity",
+        "Sedentary Lifestyle"
+      ],
+      "sourceLanguages": [
+        "en",
+        "en",
+        "en"
+      ]
+    },
+    {
+      "id": "2017-03",
+      "doi": "10.1038/ijo.2017.169",
+      "title": "Dietary fat and total energy intake modifies the association of genetic profile risk score on obesity: evidence from 48 170 UK Biobank participants",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    },
+    {
+      "id": "2017-04",
+      "doi": "10.4067/s0717-75182017000400341",
+      "title": "Efecto de una consulta nutricional protocolizada sobre el estado nutricional y hábitos alimentarios de adultos con sobrepeso y obesidad",
+      "status": "Verificadas",
+      "action": "REEMPLAZAR",
+      "originalKeywords": [
+        "Consulta nutricional estructurada",
+        "Peso corporal",
+        "Hábitos alimentarios"
+      ],
+      "sourceLanguages": [
+        "es",
+        "es",
+        "es"
+      ]
+    },
+    {
+      "id": "2017-05",
+      "doi": "10.4067/s0717-75182017000400400",
+      "title": "Consumo de bebidas azúcaradas ayer y hoy: ¿cuál es el escenario para la población chilena?",
+      "status": "No encontradas",
+      "action": "ELIMINAR",
+      "originalKeywords": [],
+      "sourceLanguages": []
+    }
+  ]
+}

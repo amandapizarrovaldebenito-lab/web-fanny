@@ -49,10 +49,48 @@
     element.dataset.i18nParams = JSON.stringify(params);
     element.setAttribute(attribute, t(key, params));
   };
+  const publicationKeywords = (id, selected = language) =>
+    (window.FannyPublicationKeywordIds?.[id] || []).map(key =>
+      getTranslation(`keywordTerms.${key}`, selected),
+    );
+  const renderPublicationKeywords = () => {
+    document.querySelectorAll('[data-publication-card]').forEach(card => {
+      const keywords = publicationKeywords(card.dataset.publicationId);
+      let tags = card.querySelector('.publication-tags');
+      let detail = card.querySelector('[data-publication-keywords]');
+      if (!keywords.length) {
+        tags?.remove();
+        detail?.remove();
+        return;
+      }
+      if (!tags) {
+        tags = document.createElement('div');
+        tags.className = 'publication-tags';
+        card.querySelector('.publication-card-copy').append(tags);
+      }
+      tags.replaceChildren(...keywords.map(keyword => {
+        const chip = document.createElement('span');
+        chip.textContent = keyword;
+        return chip;
+      }));
+      if (!detail) {
+        detail = document.createElement('p');
+        detail.dataset.publicationKeywords = '';
+        card.querySelector('.publication-metadata').prepend(detail);
+      }
+      const label = document.createElement('strong');
+      label.textContent = t('content.s0488');
+      const values = document.createElement('span');
+      values.className = 'i18n-text';
+      values.textContent = keywords.join('; ');
+      detail.replaceChildren(label, values);
+    });
+  };
   function translatePage(selected, persist = true) {
     language = valid(selected) ? selected : 'en';
     document.documentElement.lang = language;
     document.querySelectorAll(['[data-i18n]', ...attributes.map(a => `[data-i18n-${a}]`)].join(',')).forEach(updateElement);
+    renderPublicationKeywords();
     document.querySelectorAll('[data-lang]').forEach(button => {
       const active = button.dataset.lang === language;
       button.setAttribute('aria-pressed', String(active));
@@ -64,7 +102,7 @@
     document.dispatchEvent(new CustomEvent('languagechange', {detail: {language}}));
   }
   window.FannyI18n = {
-    t, getTranslation, translatePage, setText, setAttribute,
+    t, getTranslation, translatePage, setText, setAttribute, publicationKeywords,
     get language() { return language; },
     formatNumber: value => new Intl.NumberFormat(language === 'es' ? 'es-CL' : 'en-US').format(value),
     formatDate: (value, options) => new Intl.DateTimeFormat(language === 'es' ? 'es-CL' : 'en-US', options).format(value),

@@ -525,7 +525,10 @@ button {
   text-decoration-thickness: 2px;
 }
 .language-switcher button[aria-pressed="false"] {
-  color: var(--color-ink);
+  color: var(--color-muted-readable);
+}
+.language-switcher button[aria-pressed="false"]:hover {
+  color: var(--color-primary);
 }
 .language-switcher button:focus-visible {
   outline: 2px solid currentColor;
@@ -6195,6 +6198,10 @@ body.results-lightbox-open {
 .publication-detail-column a {
   font-size: 0.73rem;
   line-height: 1.45;
+}
+
+.publication-detail-column:not(.publication-materials) > p {
+  text-align: justify;
 }
 
 .publication-file {
