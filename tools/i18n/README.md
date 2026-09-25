@@ -7,7 +7,7 @@ El sitio mantiene una sola versión HTML por página. Inglés es el idioma prede
 - `assets/js/translations.js`: catálogo central, con 894 entradas de contenido, 47 de interfaz y 51 términos institucionales para cada idioma. Mantener las mismas claves en `en` y `es`.
 - `assets/js/i18n.js`: resolución de claves anidadas, interpolación segura mediante `textContent`, traducción de atributos, selector y persistencia.
 - `assets/js/main.js`: filtros, paginación, controles desplegables, detalles, formulario y visor conectados al mismo catálogo.
-- Las siete páginas raíz contienen claves `data-i18n` y su contenido inicial en inglés.
+- Home (`index.html`) y los seis `index.html` de `publications/`, `projects/`, `projects/act-early/`, `collaborations/`, `awards/` y `contact/` contienen las claves `data-i18n` y su contenido inicial en inglés. Los antiguos HTML interiores de la raíz son únicamente redirects.
 - `assets/css/styles.css`: estados del selector EN/ES y exclusión de los nuevos contenedores de texto de reglas reservadas para iconos.
 
 ## Agregar o modificar una traducción
@@ -58,3 +58,5 @@ También se puede indicar `PLAYWRIGHT_MODULE` como URL de archivo del módulo in
 `qa-layout.mjs` comprueba las siete páginas, ambos idiomas y 11 anchos. `qa-interactions.mjs` comprueba persistencia, nombres protegidos, todos los filtros, paginación, paneles móviles, teclado, formularios, almacenamiento no disponible y preferencias inválidas. Crea capturas en `outputs/`.
 
 El inventario y las herramientas de migración inicial se archivaron fuera del sitio. El catálogo JavaScript es la fuente mantenida; no se necesita ejecutar un generador para desplegar.
+
+La auditoría de URLs se documenta en `tools/urls/INFORME.md`. Las pruebas usan las páginas reales bajo sus rutas limpias. La importación de keywords modifica `publications/index.html`; no modificar el redirect `investigacion.html`. La antigua opción `qa-keywords.mjs --compare-head` se sustituyó por la comparación de preservación de contenido en `tools/urls/audit.py` durante la migración de URLs.

@@ -4,8 +4,9 @@ import fs from 'node:fs';
 import http from 'node:http';
 import path from 'node:path';
 const root=path.resolve(fileURLToPath(new URL('../../', import.meta.url)));
-const server=http.createServer((req,res)=>{const target=path.join(root,decodeURIComponent(req.url.split('?')[0]));if(!target.startsWith(root))return res.end();fs.readFile(target,(e,data)=>{res.statusCode=e?404:200;res.setHeader('Content-Type',target.endsWith('.js')?'text/javascript; charset=utf-8':target.endsWith('.css')?'text/css':target.endsWith('.html')?'text/html; charset=utf-8':target.endsWith('.svg')?'image/svg+xml':'application/octet-stream');res.end(e?'missing':data)});});
+const server=http.createServer((req,res)=>{let target=path.join(root,decodeURIComponent(req.url.split('?')[0]));if(fs.existsSync(target) && fs.statSync(target).isDirectory())target=path.join(target,'index.html');if(!target.startsWith(root))return res.end();fs.readFile(target,(e,data)=>{res.statusCode=e?404:200;res.setHeader('Content-Type',target.endsWith('.js')?'text/javascript; charset=utf-8':target.endsWith('.css')?'text/css':target.endsWith('.html')?'text/html; charset=utf-8':target.endsWith('.svg')?'image/svg+xml':'application/octet-stream');res.end(e?'missing':data)});});
 await new Promise(r=>server.listen(0,'127.0.0.1',r));
+const pageRoutes={"index": "", "investigacion": "publications/", "proyectos": "projects/", "proyecto": "projects/act-early/", "colaboradores": "collaborations/", "awards": "awards/", "contacto": "contact/"};
 const base=`http://127.0.0.1:${server.address().port}/`;
 let browser;
 try {
@@ -18,19 +19,19 @@ try {
  const assert=(v,msg)=>{if(!v)throw Error(msg)};
  const lang=async value=>{await p.evaluate(v=>FannyI18n.translatePage(v),value);};
  const visible=selector=>p.locator(selector).evaluateAll(es=>es.map((e,i)=>e.hidden ? null : i).filter(i=>i!==null));
- await p.goto(base+'index.html');
+ await p.goto(base+'');
  assert(await p.locator('html').getAttribute('lang')==='en','default ignores browser language');
  await p.locator('[data-lang=es]').click();
  assert(await p.evaluate(()=>localStorage.getItem('fanny-site-language'))==='es','saved preference');
  await p.reload();assert(await p.locator('html').getAttribute('lang')==='es','reload persistence');
  for(const name of ['index','investigacion','proyectos','colaboradores','contacto','awards','proyecto']){
-  await p.goto(base+name+'.html');assert(await p.locator('html').getAttribute('lang')==='es','navigation persistence '+name);
+  await p.goto(base+pageRoutes[name]);assert(await p.locator('html').getAttribute('lang')==='es','navigation persistence '+name);
   const names=await p.locator('[translate=no]').allTextContents();
   await p.locator('[data-lang=en]').click();
   assert(JSON.stringify(names)===JSON.stringify(await p.locator('[translate=no]').allTextContents()),'protected names '+name);
   await p.locator('[data-lang=es]').click();
  }
- await p.goto(base+'investigacion.html');await lang('en');
+ await p.goto(base+'publications/');await lang('en');
  await p.locator('[data-publication-pagination] button').filter({hasText:/^2$/}).click();
  const page2=await p.locator('[data-publication-results]').textContent();
  const ids2=await visible('[data-publication-card]');await lang('es');
@@ -49,7 +50,7 @@ try {
   ['proyectos',['.projects-filters [data-filter]','[data-project-year]'],'[data-project-card]'],
   ['colaboradores',['[data-collaborator-filter]'],'[data-collaborator]'],
   ['colaboradores',['[data-thesis-status]','[data-thesis-year]'],'[data-thesis-student]']]){
-  await p.goto(base+name+'.html');
+  await p.goto(base+pageRoutes[name]);
   for(const selector of selectors){
    for(let i=0;i<await p.locator(selector).count();i++){
     await p.locator(selector).nth(i).evaluate(e=>e.click());
@@ -59,7 +60,7 @@ try {
   }
  }
  for(const name of ['index','contacto']){
-  await p.goto(base+name+'.html');await lang('es');
+  await p.goto(base+pageRoutes[name]);await lang('es');
   const form=p.locator('[data-contact-form]');
   const required=form.locator('[required]').first();
   assert((await required.evaluate(e=>e.validationMessage)).includes('Completa'),'localised validation');
@@ -73,7 +74,7 @@ try {
  }
  await p.setViewportSize({width:390,height:900});
  for(const name of ['investigacion','proyectos','colaboradores']){
-  await p.goto(base+name+'.html');
+  await p.goto(base+pageRoutes[name]);
   for(let i=0;i<await p.locator('.mobile-filters').count();i++){
    const shell=p.locator('.mobile-filters').nth(i);
    await shell.locator('.mobile-filter-toggle').click();
@@ -93,23 +94,23 @@ try {
   assert(await p.locator('[data-menu-toggle]').getAttribute('aria-label')==='Cerrar navegación','open menu label');
   await p.keyboard.press('Escape');assert(await p.locator('[data-menu-toggle]').getAttribute('aria-expanded')==='false','Escape closes menu');
  }
- await p.goto(base+'investigacion.html');await lang('es');
+ await p.goto(base+'publications/');await lang('es');
  await p.locator('.mobile-filter-toggle').click();await p.screenshot({path:root+'/outputs/i18n-publications-mobile-es.png',fullPage:false});
- await p.setViewportSize({width:800,height:900});await p.goto(base+'investigacion.html');await p.screenshot({path:root+'/outputs/i18n-publications-tablet-es.png'});
- await p.setViewportSize({width:1440,height:900});await p.goto(base+'index.html');await p.screenshot({path:root+'/outputs/i18n-home-desktop-es.png'});
- await p.goto(base+'colaboradores.html');
+ await p.setViewportSize({width:800,height:900});await p.goto(base+'publications/');await p.screenshot({path:root+'/outputs/i18n-publications-tablet-es.png'});
+ await p.setViewportSize({width:1440,height:900});await p.goto(base+'');await p.screenshot({path:root+'/outputs/i18n-home-desktop-es.png'});
+ await p.goto(base+'collaborations/');
  await lang('es');
  for(const toggle of await p.locator('[data-reveal-toggle]').all()) {
   await toggle.evaluate(e=>e.click());await lang('en');
   assert((await toggle.textContent()).includes('fewer'),'expanded reveal label');
   await lang('es');assert((await toggle.textContent()).includes('menos'),'translated reveal label');
  }
- await p.goto(base+'investigacion.html');await lang('es');
+ await p.goto(base+'publications/');await lang('es');
  const detail=p.locator('[data-publication-toggle]').first();await detail.click();
  assert((await detail.textContent()).includes('Ocultar'),'details label');
  await lang('en');assert((await detail.textContent()).includes('Hide'),'expanded details label retained');
  const blocked=await browser.newPage();await blocked.addInitScript(()=>Object.defineProperty(window,'localStorage',{get(){throw new DOMException('Unavailable','SecurityError')}}));
- await blocked.goto(base+'index.html');assert(await blocked.locator('html').getAttribute('lang')==='en','storage unavailable defaults to English');
+ await blocked.goto(base+'');assert(await blocked.locator('html').getAttribute('lang')==='en','storage unavailable defaults to English');
  await blocked.evaluate(()=>FannyI18n.translatePage('es'));assert(await blocked.locator('html').getAttribute('lang')==='es','storage unavailable can switch');await blocked.close();
  await p.evaluate(()=>localStorage.setItem('fanny-site-language','invalid'));await p.reload();assert(await p.locator('html').getAttribute('lang')==='en','invalid stored language');
  assert(errors.length===0,'console errors '+errors.join(';'));

@@ -3,163 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Contact Dr. Alonso Pizarro for research collaboration, thesis supervision and academic inquiries." data-i18n-content="content.metacontacto">
-    <title data-i18n="content.s0371">Contact | PhD. Fanny Petermann-Rocha</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="assets/js/translations.js?v=20260924" defer></script><script src="assets/js/i18n.js?v=20260924" defer></script><script src="assets/js/main.js?v=20260923" defer></script>
+    <title>Redirecting | PhD Fanny Petermann-Rocha</title>
+    <link rel="canonical" href="contact/">
+    <script>
+      const cleanTarget = "contact/";
+      const localTarget = "contact/index.html";
+      const target = (window.location.protocol === "file:" ? localTarget : cleanTarget)
+        + window.location.search + window.location.hash;
+      window.location.replace(target);
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelector("a").setAttribute("href", target);
+      });
+    </script>
+    <noscript><meta http-equiv="refresh" content="0; url=contact/index.html"></noscript>
   </head>
   <body>
-    <a class="skip-link" href="#main" data-i18n="content.s0001">Skip to content</a>
-    <!-- INICIO HEADER -->
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="index.html" aria-label="Dr. Fanny Petermann-Rocha, home" data-i18n-aria-label="content.s0002">
-          <img class="brand-logo" src="Imagenes/imagenes/logo_udp_header.png" alt="Diego Portales University" width="58" height="34" data-i18n-alt="institutionalTerms.udpUniversity">
-          <span class="brand-copy"><span class="i18n-text" translate="no">PhD. Fanny Petermann-Rocha</span><span class="brand-subtitle" data-i18n="content.s0005">Public Health &amp; Epidemiology</span></span>
-        </a>
-        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-navigation" data-menu-toggle data-i18n-aria-label="content.s0006">
-          <span></span>
-        </button>
-        <nav class="main-nav" id="main-navigation" aria-label="Main navigation" data-main-nav data-i18n-aria-label="content.s0007">
-          <a href="index.html" data-i18n="content.s0008">Home</a>
-          <a href="investigacion.html" data-i18n="content.s0009">Publications</a>
-          <div class="nav-dropdown" data-nav-dropdown>
-            <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="projects-menu">
-              <span class="i18n-text" data-i18n="content.s0010">Projects</span>
-              <span class="nav-dropdown-chevron" aria-hidden="true">⌄</span>
-            </button>
-            <div class="nav-dropdown-menu" id="projects-menu">
-              <a href="proyectos.html" data-i18n="content.s0011">All projects</a><a href="proyecto.html" translate="no">ACT-Early</a>
-            </div>
-          </div>
-          <a href="colaboradores.html" data-i18n="content.s0013">Collaborations</a>
-          <a href="awards.html" data-i18n="content.s0014">Awards &amp; Media</a>
-          <a href="contacto.html" aria-current="page" data-i18n="content.s0015">Contact</a>
-          <nav class="language language-switcher" aria-label="Language selector" data-i18n-aria-label="ui.languageLabel"><button type="button" data-lang="en" lang="en" translate="no" aria-label="English" aria-pressed="true">EN</button><span aria-hidden="true">/</span><button type="button" data-lang="es" lang="es" translate="no" aria-label="Español" aria-pressed="false">ES</button></nav>
-        </nav>
-      </div>
-    </header>
-    <!-- FIN HEADER -->
-
-    <main id="main">
-      <section class="hero contact-hero">
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <span class="eyebrow" data-i18n="content.s0372">Let's connect</span>
-            <h1 data-i18n="content.s0015">Contact</h1>
-            <p class="lead" data-i18n="content.s0373">Let’s start a conversation</p>
-            <p class="home-contact-description" data-i18n="content.s0374">I welcome academic collaborations, institutional inquiries, research partnerships, speaking invitations, and student meetings. Please reach out using the form below or schedule a time that works for you.</p>
-            <div class="stack">
-              <a class="btn btn-primary" href="#contact-message"><span class="i18n-text" data-i18n="content.s0375">Send message</span> <img class="button-action-icon" src="Imagenes/iconos/send_24dp_FFFFFF_FILL0_wght200_GRAD0_opsz24.svg" alt="" aria-hidden="true"></a>
-            </div>
-          </div>
-          <div class="hero-image">
-            <img src="Imagenes/imagenes/hero_contact.jpg" alt="Dr. Fanny Petermann-Rocha in her research office" data-i18n-alt="content.s0376">
-          </div>
-        </div>
-      </section>
-
-      <section class="section home-collaborate contact-editorial" aria-label="Contact Fanny" data-i18n-aria-label="content.s0377">
-        <div class="container">
-          <div class="contact-grid home-contact-grid">
-            <form class="form-card home-form-card" id="contact-form" data-contact-form>
-              <div class="home-form-heading">
-                <h2 data-i18n="content.s0378">Send a message</h2>
-                <small><span>*</span> <span class="i18n-text" data-i18n="content.s0379">Required fields</span></small>
-              </div>
-              <div class="form-grid">
-                <div class="field">
-                  <label for="contact-name" data-i18n="content.s0380">Name *</label><input placeholder="Your name" id="contact-name" name="name" autocomplete="name" required data-i18n-placeholder="content.s0381">
-                </div>
-                <div class="field">
-                  <label for="contact-email" data-i18n="content.s0382">Email *</label><input placeholder="your.email@domain.com" id="contact-email" name="email" type="email" autocomplete="email" required>
-                </div>
-                <div class="field">
-                  <label for="contact-affiliation" data-i18n="content.s0384">Institution / organization</label><input placeholder="Your institution (optional)" id="contact-affiliation" name="affiliation" data-i18n-placeholder="content.s0385">
-                </div>
-                <div class="field">
-                  <label for="contact-purpose" data-i18n="content.s0386">Contact purpose *</label><select id="contact-purpose" name="purpose" required>
-                    <option value="" data-i18n="content.s0387">Please select</option>
-                    <option value="Research collaboration" data-i18n="content.s0388">Research collaboration</option>
-                    <option value="Thesis supervision" data-i18n="content.s0389">Thesis supervision</option>
-                    <option value="Speaking invitation" data-i18n="content.s0390">Speaking invitation</option>
-                    <option value="Institutional inquiry" data-i18n="content.s0391">Institutional inquiry</option>
-                    <option value="Media &amp; Press Enquiries" data-i18n="content.s0093">Media &amp; Press Enquiries</option>
-                    <option value="Other" data-i18n="content.s0392">Other</option>
-                  </select>
-                </div>
-                <div class="field full">
-                  <label for="contact-message" data-i18n="content.s0393">Message *</label><textarea placeholder="How can I help you?" id="contact-message" name="message" required data-i18n-placeholder="content.s0394"></textarea>
-                </div>
-                <div class="field full home-submit-row">
-                  <button class="btn btn-primary" type="submit">
-                    <span class="i18n-text" data-i18n="content.s0375">Send message</span> <img class="button-action-icon" src="Imagenes/iconos/send_24dp_FFFFFF_FILL0_wght200_GRAD0_opsz24.svg" alt="" aria-hidden="true">
-                  </button>
-                </div>
-              </div>
-              <p class="form-status" tabindex="-1" data-form-status aria-live="polite"></p>
-              <p class="privacy-note"><img class="button-action-icon" src="Imagenes/iconos/lock_24dp_A92B32_FILL0_wght200_GRAD0_opsz24.svg" alt="" aria-hidden="true"><span><span class="i18n-text" data-i18n="content.s0395">Your information will be used only to respond to your inquiry and handled according to our</span> <span data-i18n="content.s0396" class="privacy-principles-text">privacy principles</span>.</span></p>
-            </form>
-            <aside class="sidebar-stack home-contact-sidebar">
-              <div class="info-panel">
-                <h2 data-i18n="content.s0397">Direct contact</h2>
-                <ul class="contact-list">
-                  <li>
-                    <img class="site-icon" src="Imagenes/iconos/mail_24dp_A92B32_FILL0_wght200_GRAD0_opsz24.svg" alt="" aria-hidden="true"><a href="mailto:fanny.petermann@udp.cl" translate="no">fanny.petermann@udp.cl</a>
-                  </li>
-                  <li>
-                    <img class="site-icon" src="Imagenes/iconos/location_on_24dp_A92B32_FILL0_wght200_GRAD0_opsz24.svg" alt="" aria-hidden="true"><span><span class="i18n-text" data-i18n="institutionalTerms.udpUniversity">Diego Portales University</span><br><span class="i18n-text" data-i18n="institutionalTerms.facultyMedicine">Faculty of Medicine</span><br><span class="i18n-text" translate="no">Santiago, Chile</span></span>
-                  </li>
-                </ul>
-              </div>
-              <div class="info-panel">
-                <h2 data-i18n="content.s0102">Academic profiles</h2>
-                <div class="home-academic-tiles">
-                  <a class="academic-tile" href="https://scholar.google.com/citations?user=eS_SYGMAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer"><img class="academic-tile-mark" src="Imagenes/imagenes/logo_google_schoolar_rojo.png" alt="" width="34" height="34"><span><span class="i18n-text" translate="no">Google Scholar</span>
-                      <span class="external-mark" aria-hidden="true">↗</span></span></a><a class="academic-tile" href="https://orcid.org/0000-0002-4384-4962" target="_blank" rel="noopener noreferrer"><img class="academic-tile-mark" src="Imagenes/imagenes/logo_orcid_rojo.png" alt="" width="34" height="34"><span><span class="i18n-text" translate="no">ORCID</span>
-                      <span class="external-mark" aria-hidden="true">↗</span></span></a><a class="academic-tile" href="https://www.researchgate.net/profile/Fanny-Petermann-Rocha" target="_blank" rel="noopener noreferrer"><img class="academic-tile-mark" src="Imagenes/imagenes/logo_research_gate_rojo.png" alt="" width="34" height="34"><span><span class="i18n-text" translate="no">ResearchGate</span>
-                      <span class="external-mark" aria-hidden="true">↗</span></span></a><a class="academic-tile" href="https://www.linkedin.com/in/fanny-petermann-rocha-5611406a/" target="_blank" rel="noopener noreferrer"><img class="academic-tile-mark" src="Imagenes/imagenes/logo_linkedin_rojo.png" alt="" width="34" height="34"><span><span class="i18n-text" translate="no">LinkedIn</span>
-                      <span class="external-mark" aria-hidden="true">↗</span></span></a>
-                </div>
-              </div>
-            </aside>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- INICIO FOOTER -->
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <h2 translate="no">PhD Fanny Petermann Rocha</h2>
-          <p data-i18n="content.s0005">Public Health &amp; Epidemiology</p>
-          <img class="footer-udp-logo" src="Imagenes/imagenes/logo_udp_footer.png" alt="Diego Portales University" width="120" height="70" loading="lazy" data-i18n-alt="institutionalTerms.udpUniversity">
-        </div>
-        <div>
-          <h3 data-i18n="content.s0098">Links</h3>
-          <div class="footer-links">
-            <a href="index.html" data-i18n="content.s0008">Home</a>
-            <a href="investigacion.html" data-i18n="content.s0009">Publications</a><a href="proyectos.html" data-i18n="content.s0010">Projects</a><a href="colaboradores.html" data-i18n="content.s0013">Collaborations</a><a href="awards.html" data-i18n="content.s0014">Awards &amp; Media</a>
-          </div>
-        </div>
-        <div>
-          <h3 data-i18n="content.s0015">Contact</h3>
-          <div class="footer-contact">
-            <span><img src="Imagenes/iconos/Footer/mail_24dp_FFFFFF_FILL0_wght300_GRAD0_opsz24.svg" alt=""><a href="mailto:fanny.petermann@udp.cl" translate="no">fanny.petermann@udp.cl</a></span><span><img src="Imagenes/iconos/Footer/account_balance_24dp_FFFFFF_FILL0_wght300_GRAD0_opsz24.svg" alt=""><span class="i18n-text" data-i18n="content.institutionalPhrase02">Center for Biomedical Research, Faculty of Medicine, Diego Portales University</span></span><span><img src="Imagenes/iconos/Footer/location_on_24dp_FFFFFF_FILL0_wght300_GRAD0_opsz24.svg" alt=""><span class="i18n-text" translate="no">Ejército 233, Santiago, Chile</span></span>
-          </div>
-        </div>
-        <div>
-          <h3 data-i18n="content.s0102">Academic profiles</h3>
-          <div class="footer-links">
-            <a href="https://scholar.google.com/citations?user=eS_SYGMAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" translate="no">Google Scholar</a><a href="https://www.researchgate.net/profile/Fanny-Petermann-Rocha" target="_blank" rel="noopener noreferrer" translate="no">ResearchGate</a><a href="https://orcid.org/0000-0002-4384-4962" target="_blank" rel="noopener noreferrer" translate="no">ORCID</a><a href="https://www.linkedin.com/in/fanny-petermann-rocha-5611406a/" target="_blank" rel="noopener noreferrer" translate="no">LinkedIn</a>
-          </div>
-        </div>
-      </div>
-      <div class="container footer-bottom">
-        <span data-i18n="content.s0107">© 2026 PhD. Fanny Petermann Rocha. All rights reserved.</span><span data-i18n="content.s0108">Privacidad </span>
-      </div>
-    </footer>
-    <!-- FIN FOOTER -->
+    <p>Redirecting to <a href="contact/index.html">Contact</a>.</p>
   </body>
 </html>

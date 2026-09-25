@@ -32,7 +32,7 @@ for entry in csv.DictReader((HERE / 'keyword-glossary.tsv').open(encoding='utf-8
         assert key not in glossary, original
         glossary[key] = (terms[pair], entry['sourceLanguage'])
 
-page_path = ROOT / 'investigacion.html'
+page_path = ROOT / 'publications/index.html'
 page = page_path.read_text(encoding='utf-8')
 tree = html.fromstring(page)
 cards = {c.get('data-publication-id'): c for c in tree.xpath('//*[@data-publication-card]')}

@@ -1,6 +1,22 @@
 const i18n = window.FannyI18n;
 const t = i18n.t;
 
+// Resolve generated assets from this shared script, regardless of page depth.
+const siteRoot = new URL('../../', document.currentScript.src);
+const siteAsset = path => new URL(path, siteRoot).href;
+
+function enableLocalFileNavigation() {
+  if (window.location.protocol !== 'file:') return;
+  document.querySelectorAll('a[href]').forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('//') || /^[a-z][a-z\d+.-]*:/i.test(href)) return;
+    const [, pathname, suffix = ''] = href.match(/^([^?#]*)(.*)$/);
+    if (pathname.endsWith('/')) link.setAttribute('href', `${pathname}index.html${suffix}`);
+  });
+}
+
+enableLocalFileNavigation();
+
 const menuButton = document.querySelector("[data-menu-toggle]");
 const mainNav = document.querySelector("[data-main-nav]");
 
@@ -550,7 +566,7 @@ document.querySelectorAll("[data-publication-toggle]").forEach((toggle) => {
     toggle.closest("[data-publication-card]")?.classList.toggle("is-expanded", !expanded);
     i18n.setText(toggle.querySelector("[data-i18n]"), expanded ? "ui.showDetails" : "ui.hideDetails");
     const icon = toggle.querySelector("[data-details-icon]");
-    if (icon) icon.src = `Imagenes/iconos/keyboard_arrow_${expanded ? "down" : "up"}_24dp_FFFFFF_FILL0_wght200_GRAD0_opsz24.svg`;
+    if (icon) icon.src = siteAsset(`Imagenes/iconos/keyboard_arrow_${expanded ? "down" : "up"}_24dp_FFFFFF_FILL0_wght200_GRAD0_opsz24.svg`);
     if (details) details.hidden = expanded;
   });
 });
@@ -612,7 +628,7 @@ document.querySelectorAll("[data-reveal-toggle]").forEach((toggle) => {
 
     toggle.setAttribute("aria-expanded", String(nextExpanded));
     const revealIcon = toggle.querySelector("[data-reveal-icon]");
-    if (revealIcon) revealIcon.src = `Imagenes/iconos/keyboard_arrow_${nextExpanded ? "up" : "down"}_24dp_A92B32_FILL0_wght200_GRAD0_opsz24.svg`;
+    if (revealIcon) revealIcon.src = siteAsset(`Imagenes/iconos/keyboard_arrow_${nextExpanded ? "up" : "down"}_24dp_A92B32_FILL0_wght200_GRAD0_opsz24.svg`);
     items.forEach((item) => {
       item.hidden = !nextExpanded;
       item.classList.toggle("is-filtered-out", !nextExpanded);
@@ -793,7 +809,7 @@ document.querySelectorAll("[data-contact-form]").forEach((form) => {
     toggle.innerHTML = '<svg viewBox="0 -960 960 960" width="24" height="24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M440-120v-240h80v80h320v80H520v80h-80ZM120-200v-80h240v80H120Zm160-160v-80H120v-80h160v-80h80v240h-80Zm160-80v-80h400v80H440Zm160-160v-240h80v80h160v80H680v80h-80ZM120-680v-80h400v80H120Z"/></svg>';
     const caption = make('span');
     const arrow = make('img', 'mobile-filter-arrow');
-    const arrowPath = direction => `Imagenes/iconos/keyboard_arrow_${direction}_24dp_FFFFFF_FILL0_wght200_GRAD0_opsz24.svg`;
+    const arrowPath = direction => siteAsset(`Imagenes/iconos/keyboard_arrow_${direction}_24dp_FFFFFF_FILL0_wght200_GRAD0_opsz24.svg`);
     arrow.src = arrowPath('down');
     arrow.alt = '';
     new MutationObserver(() => {

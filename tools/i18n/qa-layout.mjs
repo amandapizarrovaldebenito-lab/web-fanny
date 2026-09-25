@@ -4,8 +4,9 @@ import fs from 'node:fs';
 import http from 'node:http';
 import path from 'node:path';
 const root=path.resolve(fileURLToPath(new URL('../../', import.meta.url)));
-const server=http.createServer((req,res)=>{const target=path.join(root,decodeURIComponent(req.url.split('?')[0]));if(!target.startsWith(root))return res.end();fs.readFile(target,(e,data)=>{res.statusCode=e?404:200;res.setHeader('Content-Type',target.endsWith('.js')?'text/javascript; charset=utf-8':target.endsWith('.css')?'text/css':target.endsWith('.html')?'text/html; charset=utf-8':target.endsWith('.svg')?'image/svg+xml':'application/octet-stream');res.end(e?'missing':data)});});
+const server=http.createServer((req,res)=>{let target=path.join(root,decodeURIComponent(req.url.split('?')[0]));if(fs.existsSync(target) && fs.statSync(target).isDirectory())target=path.join(target,'index.html');if(!target.startsWith(root))return res.end();fs.readFile(target,(e,data)=>{res.statusCode=e?404:200;res.setHeader('Content-Type',target.endsWith('.js')?'text/javascript; charset=utf-8':target.endsWith('.css')?'text/css':target.endsWith('.html')?'text/html; charset=utf-8':target.endsWith('.svg')?'image/svg+xml':'application/octet-stream');res.end(e?'missing':data)});});
 await new Promise(r=>server.listen(0,'127.0.0.1',r));
+const pageRoutes={"index": "", "investigacion": "publications/", "proyectos": "projects/", "proyecto": "projects/act-early/", "colaboradores": "collaborations/", "awards": "awards/", "contacto": "contact/"};
 const base=`http://127.0.0.1:${server.address().port}/`;
 let browser;
 try {
@@ -15,7 +16,7 @@ try {
  for(const width of [320,364,390,480,500,768,800,986,1024,1050,1440]){
  await p.setViewportSize({width,height:900});
  for(const name of ['index','investigacion','proyectos','colaboradores','contacto','awards','proyecto']){
-  await p.goto(base+name+'.html');
+  await p.goto(base+pageRoutes[name]);
   await p.evaluate(() => document.fonts.ready);
   for(const lang of ['en','es']){
    await p.evaluate(lang=>FannyI18n.translatePage(lang),lang);
