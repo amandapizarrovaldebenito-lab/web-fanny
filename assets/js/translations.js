@@ -91,10 +91,11 @@ window.FannyTranslations = {
       "s0115": "Academic mentor discussing research with two students",
       "s0116": "Academic network statistics",
       "s0117": "Research Networks",
-      "s0118": "Scientific Memberships",
+      "s0118": "Professional Memberships",
       "s0119": "Scientific community",
-      "s0120": "Memberships & Scientific roles",
-      "s0124": "Senior member",
+      "s0120": "Scientific Networks & Memberships",
+      "collaborationGroups": "Scientific Collaboration Groups",
+      "collaborationGroupLabel": "Scientific collaboration group",
       "s0128": "Member",
       "s0135": "Explore the work",
       "s0136": "Meet the national and international researchers collaborating across universities and research institutions.",
@@ -180,7 +181,6 @@ window.FannyTranslations = {
       "s0395": "Your information will be used only to respond to your inquiry and handled according to our",
       "s0396": "privacy principles",
       "s0397": "Direct contact",
-      "s0400": "PhD. Fanny Petermann Rocha| Hydrology Research",
       "s0401": "Academic researcher",
       "s0404": "Fanny Petermann-Rocha is a Chilean-Swiss public health researcher and dietitian with international experience in epidemiology, ageing and lifestyle across the life course. She is an Associate Professor at {@institutionalTerms.udpUniversity} and an Affiliate at the {@institutionalTerms.glasgowUniversity}. Her research focuses on modifiable lifestyle factors, chronic disease, sarcopenia and frailty, combining population-based epidemiology, biostatistics and evidence synthesis. She is Deputy Director of ELHOC and a Senior Collaborator of the {@institutionalTerms.globalBurdenDiseaseStudy}.",
       "s0405": "Research areas",
@@ -191,7 +191,7 @@ window.FannyTranslations = {
       "s0410": "Nutrition",
       "s0411": "Sarcopenia & Frailty",
       "s0412": "View Publications",
-      "s0413": "Open Alonso Pizarro's CV in a new tab",
+      "s0413": "Open Fanny Petermann-Rocha's CV in a new tab",
       "s0414": "Download CV",
       "s0415": "Academic metrics",
       "s0416": "Scientific Publication",
@@ -873,13 +873,6 @@ window.FannyTranslations = {
       "s1240": "Preview of Efecto de una consulta nutricional protocolizada sobre el estado nutricional y hábitos alimentarios de adultos con sobrepeso y obesidad",
       "s1246": "Preview of Consumo de bebidas azúcaradas ayer y hoy: ¿cuál es el escenario para la población chilena?",
       "s1251": "Art; Humanities",
-      "metaawards": "Awards & Media and scientific recognition of Fanny Petermann-Rocha.",
-      "metacolaboradores": "Students, thesis researchers and international collaborators working with Dr. Alonso Pizarro.",
-      "metacontacto": "Contact Dr. Alonso Pizarro for research collaboration, thesis supervision and academic inquiries.",
-      "metaindex": "Academic profile of Dr. Alonso Pizarro Valdebenito, hydrology and hydraulic engineering researcher.",
-      "metainvestigacion": "Selected research publications by Fanny Petermann-Rocha in public health, epidemiology, nutrition and healthy ageing.",
-      "metaproyecto": "Detailed overview of the Flood Resilience funded research project.",
-      "metaproyectos": "Research projects and doctoral funding involving Fanny Petermann-Rocha in public health, healthy ageing and health innovation.",
       "institutionalPhrase01": "{@institutionalTerms.stanfordUniversity} / Elsevier",
       "institutionalPhrase02": "{@institutionalTerms.biomedicalResearchCenter}, {@institutionalTerms.facultyMedicine}, {@institutionalTerms.udpUniversity}",
       "institutionalPhrase03": "{@institutionalTerms.globalBurdenDisease} (GBD)",
@@ -1100,10 +1093,11 @@ window.FannyTranslations = {
       "s0115": "Mentora académica conversando sobre investigación con dos estudiantes",
       "s0116": "Estadísticas de la red académica",
       "s0117": "Redes de investigación",
-      "s0118": "Membresías científicas",
+      "s0118": "Membresías Profesionales",
       "s0119": "Comunidad científica",
-      "s0120": "Membresías y roles científicos",
-      "s0124": "Miembro sénior",
+      "s0120": "Redes Científicas y Membresías",
+      "collaborationGroups": "Grupos de Colaboración Científica",
+      "collaborationGroupLabel": "Grupo de colaboración científica",
       "s0128": "Miembro",
       "s0135": "Explora el trabajo",
       "s0136": "Conoce a quienes colaboran en investigación a nivel nacional e internacional desde universidades e instituciones de investigación.",
@@ -1189,7 +1183,6 @@ window.FannyTranslations = {
       "s0395": "Tu información se utilizará solo para responder a tu consulta y se tratará de acuerdo con nuestros",
       "s0396": "principios de privacidad",
       "s0397": "Contacto directo",
-      "s0400": "PhD. Fanny Petermann Rocha | Investigación en hidrología",
       "s0401": "Investigadora académica",
       "s0404": "Fanny Petermann-Rocha es investigadora chileno-suiza en salud pública y nutricionista, con experiencia internacional en epidemiología, envejecimiento y estilos de vida a lo largo del curso de vida. Es profesora asociada en {@institutionalTerms.udpUniversity} e investigadora afiliada en {@institutionalTerms.glasgowUniversity}. Su investigación se centra en factores modificables del estilo de vida, enfermedades crónicas, sarcopenia y fragilidad, combinando epidemiología poblacional, bioestadística y síntesis de evidencia. Es subdirectora de ELHOC y colaboradora sénior del {@institutionalTerms.globalBurdenDiseaseStudy}.",
       "s0405": "Áreas de investigación",
@@ -1200,7 +1193,7 @@ window.FannyTranslations = {
       "s0410": "Nutrición",
       "s0411": "Sarcopenia y fragilidad",
       "s0412": "Ver publicaciones",
-      "s0413": "Abrir el CV de Alonso Pizarro en una pestaña nueva",
+      "s0413": "Abrir el CV de Fanny Petermann-Rocha en una pestaña nueva",
       "s0414": "Descargar CV",
       "s0415": "Indicadores académicos",
       "s0416": "Publicaciones científicas",
@@ -1882,13 +1875,6 @@ window.FannyTranslations = {
       "s1240": "Vista previa de Efecto de una consulta nutricional protocolizada sobre el estado nutricional y hábitos alimentarios de adultos con sobrepeso y obesidad",
       "s1246": "Vista previa de Consumo de bebidas azúcaradas ayer y hoy: ¿cuál es el escenario para la población chilena?",
       "s1251": "Arte; Humanidades",
-      "metaawards": "Premios, medios y reconocimientos científicos de Fanny Petermann-Rocha.",
-      "metacolaboradores": "Estudiantes, tesistas y colaboradores internacionales que trabajan con Dr. Alonso Pizarro.",
-      "metacontacto": "Contacta a Dr. Alonso Pizarro para colaboraciones de investigación, supervisión de tesis y consultas académicas.",
-      "metaindex": "Perfil académico de Dr. Alonso Pizarro Valdebenito, investigador en hidrología e ingeniería hidráulica.",
-      "metainvestigacion": "Publicaciones seleccionadas de Fanny Petermann-Rocha en salud pública, epidemiología, nutrición y envejecimiento saludable.",
-      "metaproyecto": "Descripción detallada del proyecto de investigación financiado Flood Resilience.",
-      "metaproyectos": "Proyectos de investigación y financiamiento doctoral de Fanny Petermann-Rocha en salud pública, envejecimiento saludable e innovación en salud.",
       "institutionalPhrase01": "{@institutionalTerms.stanfordUniversity} / Elsevier",
       "institutionalPhrase02": "{@institutionalTerms.biomedicalResearchCenter}, {@institutionalTerms.facultyMedicine}, {@institutionalTerms.udpUniversity}",
       "institutionalPhrase03": "{@institutionalTerms.globalBurdenDisease} (GBD)",
@@ -2630,3 +2616,67 @@ window.FannyPublicationKeywordIds = {
   "2017-05": []
 };
 // END AUDITED PUBLICATION KEYWORDS
+
+// Dedicated metadata; never used for visible academic content.
+window.FannyTranslations.en.seo = {
+  "home": {
+    "title": "Fanny Petermann-Rocha | Epidemiology Researcher in Chile",
+    "description": "Academic website of Dr. Fanny Petermann-Rocha, a public health and epidemiology researcher in Chile focused on lifestyle, ageing, nutrition, sarcopenia and frailty."
+  },
+  "publications": {
+    "title": "Research Publications | Fanny Petermann-Rocha",
+    "description": "Explore research publications by Fanny Petermann-Rocha in epidemiology, public health, nutrition, healthy ageing, physical activity, sarcopenia and frailty."
+  },
+  "projects": {
+    "title": "Research Projects | Fanny Petermann-Rocha",
+    "description": "Explore Fanny Petermann-Rocha’s research projects in public health, epidemiology, healthy ageing, reproductive health, digital health and population health."
+  },
+  "actEarly": {
+    "title": "ACT-Early | Sarcopenia & Frailty Research in Chile",
+    "description": "ACT-Early, led by Fanny Petermann-Rocha, investigates early detection of sarcopenia and frailty in middle-aged adults to support healthier ageing in Chile."
+  },
+  "collaborations": {
+    "title": "Research Collaborations | Fanny Petermann-Rocha",
+    "description": "Explore Fanny Petermann-Rocha’s national and international research collaborations, scientific networks, memberships and research assistants."
+  },
+  "awards": {
+    "title": "Awards & Media | Fanny Petermann-Rocha",
+    "description": "Explore awards, scientific recognition and media appearances highlighting Fanny Petermann-Rocha’s work in public health and epidemiology."
+  },
+  "contact": {
+    "title": "Contact Fanny Petermann-Rocha | Research Collaboration",
+    "description": "Contact Fanny Petermann-Rocha for research collaboration, academic projects, speaking invitations and media enquiries in public health and epidemiology."
+  }
+};
+
+// Dedicated metadata; never used for visible academic content.
+window.FannyTranslations.es.seo = {
+  "home": {
+    "title": "Fanny Petermann-Rocha | Investigadora en Epidemiología en Chile",
+    "description": "Sitio académico de la Dra. Fanny Petermann-Rocha, investigadora en salud pública y epidemiología en Chile, enfocada en estilos de vida, envejecimiento, nutrición, sarcopenia y fragilidad."
+  },
+  "publications": {
+    "title": "Publicaciones Científicas | Fanny Petermann-Rocha",
+    "description": "Explora las publicaciones científicas de Fanny Petermann-Rocha en epidemiología, salud pública, nutrición, envejecimiento saludable, actividad física, sarcopenia y fragilidad."
+  },
+  "projects": {
+    "title": "Proyectos de Investigación | Fanny Petermann-Rocha",
+    "description": "Explora los proyectos de investigación de Fanny Petermann-Rocha en salud pública, epidemiología, envejecimiento saludable, salud reproductiva, salud digital y salud poblacional."
+  },
+  "actEarly": {
+    "title": "ACT-Early | Investigación en Sarcopenia y Fragilidad",
+    "description": "ACT-Early, liderado por Fanny Petermann-Rocha, investiga la detección temprana de sarcopenia y fragilidad en adultos de mediana edad para favorecer un envejecimiento saludable en Chile."
+  },
+  "collaborations": {
+    "title": "Colaboraciones de Investigación | Fanny Petermann-Rocha",
+    "description": "Explora las colaboraciones nacionales e internacionales, redes científicas, membresías y asistentes de investigación vinculados al trabajo de Fanny Petermann-Rocha."
+  },
+  "awards": {
+    "title": "Premios y Medios | Fanny Petermann-Rocha",
+    "description": "Explora premios, reconocimientos científicos y apariciones en medios relacionadas con el trabajo de Fanny Petermann-Rocha en salud pública y epidemiología."
+  },
+  "contact": {
+    "title": "Contacto Fanny Petermann-Rocha | Colaboración Científica",
+    "description": "Contacta a Fanny Petermann-Rocha para colaboraciones científicas, proyectos académicos, invitaciones, medios y consultas en salud pública y epidemiología."
+  }
+};
