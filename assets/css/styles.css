@@ -10050,3 +10050,10 @@ body.results-lightbox-open {
 .network-memberships .membership-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .network-memberships .membership-group-heading { grid-column: 1 / -1; margin: 0; }
 .network-memberships .membership-group-heading:not(:first-child) { margin-top: 1rem; }
+
+@media (min-width: 1000px) {
+  .network-memberships .membership-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .network-memberships .membership-group-heading { grid-column: 1 / 3; grid-row: 1; }
+  .network-memberships .membership-group-heading:not(:first-child) { grid-column: 3 / 5; margin-top: 0; }
+  .network-memberships .membership-card { grid-row: 2; }
+}
