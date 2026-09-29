@@ -641,7 +641,102 @@ document.querySelectorAll("[data-reveal-toggle]").forEach((toggle) => {
   });
 });
 
-document.querySelectorAll("[data-contact-form]").forEach((form) => {
+(() => {
+const forms = [...document.querySelectorAll('[data-contact-form]')];
+if (!forms.length) return;
+const emailConfig = Object.freeze({
+  serviceId: 'service_238se1p',
+  templateId: 'template_ae6yeqi',
+  publicKey: 'KP7mPpxrPnFpwfeqH',
+});
+if (window.emailjs) window.emailjs.init({publicKey: emailConfig.publicKey});
+
+// One shared dialog for both contact forms; no markup is added on other pages.
+const modal = document.createElement('dialog');
+modal.className = 'contact-status-modal';
+modal.setAttribute('aria-labelledby', 'contact-status-title');
+modal.setAttribute('aria-describedby', 'contact-status-description');
+modal.innerHTML = `
+  <button class="contact-status-x" type="button" data-contact-close aria-label="Close"><span aria-hidden="true">×</span></button>
+  <div class="contact-status-icon" aria-hidden="true">
+    <span class="contact-status-spinner"></span>
+    <svg class="contact-status-check" viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4 10-11"/></svg>
+    <svg class="contact-status-error" viewBox="0 0 24 24" fill="none"><path d="M12 5v9m0 4v1"/></svg>
+  </div>
+  <div role="status" aria-live="polite" aria-atomic="true">
+    <h2 id="contact-status-title" tabindex="-1"></h2>
+    <p id="contact-status-description"></p>
+  </div>
+  <div class="contact-status-actions">
+    <button class="btn btn-primary" type="button" data-contact-primary></button>
+    <button class="btn btn-secondary" type="button" data-contact-close data-contact-secondary></button>
+  </div>`;
+document.body.append(modal);
+const title = modal.querySelector('h2');
+const description = modal.querySelector('p');
+const primary = modal.querySelector('[data-contact-primary]');
+const secondary = modal.querySelector('[data-contact-secondary]');
+const closeButton = modal.querySelector('.contact-status-x');
+let activeForm;
+let submitter;
+let pending = false;
+
+const renderState = () => {
+  const state = modal.dataset.state;
+  if (!state) return;
+  i18n.setText(title, `ui.contact${state[0].toUpperCase() + state.slice(1)}Title`);
+  i18n.setText(description, `ui.contact${state[0].toUpperCase() + state.slice(1)}Description`);
+  i18n.setText(primary, state === 'error' ? 'ui.contactRetry' : 'ui.contactDone');
+  i18n.setText(secondary, 'ui.contactClose');
+  i18n.setAttribute(closeButton, 'aria-label', 'ui.contactClose');
+  closeButton.hidden = state === 'sending';
+  primary.hidden = state === 'sending';
+  secondary.hidden = state !== 'error';
+};
+const setState = state => {
+  modal.dataset.state = state;
+  renderState();
+  if (!modal.open) {
+    modal.showModal();
+    document.body.classList.add('contact-status-open');
+  }
+  (state === 'sending' ? title : primary).focus();
+};
+const closeModal = () => {
+  if (!pending) modal.close();
+};
+modal.querySelectorAll('[data-contact-close]').forEach(button => button.addEventListener('click', closeModal));
+primary.addEventListener('click', () => {
+  if (modal.dataset.state === 'error' && !pending) activeForm.requestSubmit(submitter);
+  else closeModal();
+});
+modal.addEventListener('cancel', event => {
+  event.preventDefault();
+  closeModal();
+});
+modal.addEventListener('close', () => {
+  document.body.classList.remove('contact-status-open');
+  submitter?.focus({preventScroll:true});
+});
+modal.addEventListener('keydown', event => {
+  if (event.key !== 'Tab') return;
+  const buttons = [...modal.querySelectorAll('button')].filter(button => !button.hidden && !button.disabled);
+  if (!buttons.length) {
+    event.preventDefault();
+    title.focus();
+    return;
+  }
+  const first = buttons[0];
+  const last = buttons[buttons.length - 1];
+  if (event.shiftKey && (document.activeElement === first || !buttons.includes(document.activeElement))) {
+    event.preventDefault(); last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault(); first.focus();
+  }
+});
+document.addEventListener('languagechange', renderState);
+
+forms.forEach((form) => {
   const status = form.querySelector("[data-form-status]");
   const controls = [...form.querySelectorAll("input, select, textarea")];
   const updateValidity = control => {
@@ -657,15 +752,39 @@ document.querySelectorAll("[data-contact-form]").forEach((form) => {
     updateValidity(control);
   });
   document.addEventListener("languagechange", () => controls.forEach(updateValidity));
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
+    if (pending) return;
     if (!form.reportValidity()) return;
-    if (status) {
-      i18n.setText(status, "ui.formStatus");
-      status.focus();
+    activeForm = form;
+    submitter = form.querySelector('[type="submit"]');
+    pending = true;
+    submitter.disabled = true;
+    form.setAttribute('aria-busy', 'true');
+    if (status) status.textContent = '';
+    setState('sending');
+    try {
+      if (!window.emailjs?.sendForm) throw new Error('EmailJS SDK unavailable');
+      form.elements.namedItem('language').value = i18n.language.toUpperCase();
+      form.elements.namedItem('page_url').value = window.location.href;
+      await window.emailjs.sendForm(emailConfig.serviceId, emailConfig.templateId, form);
+      form.reset();
+      controls.forEach(control => {
+        updateValidity(control);
+        control.removeAttribute('aria-invalid');
+      });
+      setState('success');
+    } catch {
+      // Keep entered data and do not expose service errors or personal information.
+      setState('error');
+    } finally {
+      pending = false;
+      submitter.disabled = false;
+      form.removeAttribute('aria-busy');
     }
   });
 });
+})();
 
 (() => {
   const lightbox = document.querySelector("[data-results-lightbox]");

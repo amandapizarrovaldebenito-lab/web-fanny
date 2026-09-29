@@ -60,3 +60,21 @@ También se puede indicar `PLAYWRIGHT_MODULE` como URL de archivo del módulo in
 El inventario y las herramientas de migración inicial se archivaron fuera del sitio. El catálogo JavaScript es la fuente mantenida; no se necesita ejecutar un generador para desplegar.
 
 La auditoría de URLs se documenta en `tools/urls/INFORME.md`. Las pruebas usan las páginas reales bajo sus rutas limpias. La importación de keywords modifica `publications/index.html`; no modificar el redirect `investigacion.html`. La antigua opción `qa-keywords.mjs --compare-head` se sustituyó por la comparación de preservación de contenido en `tools/urls/audit.py` durante la migración de URLs.
+
+## Modal de contacto
+
+Home y Contact comparten un único componente por página, creado en `main.js` solamente cuando existe `[data-contact-form]`. Usa `<dialog>.showModal()`, los tokens actuales de CSS y las claves `ui.contact*` del catálogo EN/ES. No requiere HTML duplicado.
+
+Estados: `sending` bloquea doble envío y cierre; `success` solo se activa después de resolver `emailjs.sendForm()` y entonces limpia el formulario; `error` conserva los campos y permite reintentar. Tab/Shift+Tab quedan dentro del diálogo; X, Escape y los botones cierran después del envío, devolviendo foco al submit. El spinner respeta reduced motion.
+
+**Integración configurada el 28-09-2026:** Home y Contact cargan EmailJS Browser v4 desde el CDN oficial indicado por el usuario, con `defer` y antes de `main.js`. El controlador compartido inicializa la Public Key `KP7mPpxrPnFpwfeqH` y llama una sola vez a `emailjs.sendForm('service_238se1p', 'template_ae6yeqi', form)` por submit válido. No se usa Private Key ni se modifica el template, Reply-To o destinatario.
+
+Los atributos `name` son exactamente `name`, `email`, `institution`, `contact_purpose`, `message`, `language` y `page_url`. Los últimos dos son campos ocultos y se actualizan antes de cada envío con EN/ES y `window.location.href`. El transporte pasa el formulario original a [EmailJS sendForm](https://www.emailjs.com/docs/sdk/send-form/). Si el SDK no carga, se conserva la información y se muestra error, sin éxito falso.
+
+**Configuración del template confirmada por el usuario:** To Email `fanny.petermann@udp.cl`; From Name `Fanny Petermann-Rocha Website`; From Email predeterminado del servicio conectado; Reply-To `{{email}}`. El frontend no envía overrides de From, destinatario o Reply-To ni modifica el template. La variable `email` contiene el correo introducido por el visitante.
+
+**Pruebas reales realizadas:** después de confirmar el destinatario y autorizar acceso de red, se enviaron exactamente dos mensajes identificados como pruebas técnicas, usando `fanny.petermann@udp.cl` en el campo email. Home en EN y Contact en ES obtuvieron HTTP 200 de EmailJS. En cada página se comprobó una sola llamada a sendForm, estado sending al comenzar, success tras resolver la Promise y reset posterior. No hubo excepciones JavaScript. Se bloquearon Google Fonts intencionalmente en el navegador de pruebas, por lo que aparecieron avisos de recurso de fuentes bloqueado; no son errores del formulario. Resultados locales en `outputs/emailjs-live-result.json`.
+
+La aceptación HTTP 200 confirma que EmailJS procesó los envíos, pero no prueba entrega a la bandeja de entrada ni el encabezado del mensaje recibido. Se solicitó al usuario confirmar ambos mensajes y Reply-To desde su buzón; esa comprobación sigue pendiente. No repetir pruebas reales sin autorización: los scripts de regresión bloquean o sustituyen el SDK para no enviar correos.
+
+`node tools/i18n/qa-contact-modal.mjs` comprueba ambos formularios con Promises controladas del SDK inyectadas exclusivamente en el navegador de pruebas, sin enviar correos. Comprueba validación, estados, llamada única, error/reintento, reset, teclado/foco, ambos idiomas, cuatro anchos, reduced motion y SDK no disponible. Las capturas de prueba se guardan en `outputs/contact-modal/`; sus estados de éxito no prueban entrega real de correo.

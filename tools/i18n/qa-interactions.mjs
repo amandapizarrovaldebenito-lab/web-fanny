@@ -13,6 +13,7 @@ try {
  browser=await chromium.launch({channel:'msedge',headless:true,timeout:20000});
 
  const p=await browser.newPage({locale:'es-CL'});
+ await p.route('https://cdn.jsdelivr.net/npm/@emailjs/**',r=>r.abort()); // Never send real email in regression tests.
  if (process.env.OFFLINE_FONTS) await p.route('https://fonts.googleapis.com/**',r=>r.abort());
  p.setDefaultTimeout(8000);
  const errors=[];p.on('pageerror',e=>errors.push(e.message));
@@ -64,13 +65,15 @@ try {
   const form=p.locator('[data-contact-form]');
   const required=form.locator('[required]').first();
   assert((await required.evaluate(e=>e.validationMessage)).includes('Completa'),'localised validation');
-  await form.locator('input:not([type=email])').first().fill('Prueba');
+  await form.locator('input:not([type=email]):not([type=hidden])').first().fill('Prueba');
   await form.locator('input[type=email]').fill('fanny-test@example.com');
   await form.locator('select').selectOption({index:1});await form.locator('textarea').fill('Mensaje de prueba local.');
-  const before=await form.evaluate(e=>[...new FormData(e).entries()]);await lang('en');
-  assert(JSON.stringify(before)===JSON.stringify(await form.evaluate(e=>[...new FormData(e).entries()])),'form values persisted');
-  await form.locator('[type=submit]').click();assert((await form.locator('[data-form-status]').textContent()).includes('submission service'),'English form status');
-  await lang('es');assert((await form.locator('[data-form-status]').textContent()).includes('servicio'),'Spanish form status');
+  const before=await form.evaluate(e=>[...new FormData(e).entries()].filter(([key])=>!['language','page_url'].includes(key)));await lang('en');
+  assert(JSON.stringify(before)===JSON.stringify(await form.evaluate(e=>[...new FormData(e).entries()].filter(([key])=>!['language','page_url'].includes(key)))),'form values persisted');
+  await form.locator('[type=submit]').click();assert((await p.locator('#contact-status-title').textContent())==='Message not sent','English missing-service error');
+  await lang('es');assert((await p.locator('#contact-status-title').textContent())==='No se pudo enviar el mensaje','Spanish missing-service error');
+  assert(JSON.stringify(before)===JSON.stringify(await form.evaluate(e=>[...new FormData(e).entries()].filter(([key])=>!['language','page_url'].includes(key)))),'error preserves form values');
+  await p.locator('.contact-status-x').click();
  }
  await p.setViewportSize({width:390,height:900});
  for(const name of ['investigacion','proyectos','colaboradores']){

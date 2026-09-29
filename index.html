@@ -6,7 +6,8 @@
     <meta name="description" content="Academic profile of Dr. Alonso Pizarro Valdebenito, hydrology and hydraulic engineering researcher." data-i18n-content="content.metaindex">
     <title data-i18n="content.s0400">PhD. Fanny Petermann Rocha| Hydrology Research</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="assets/js/translations.js?v=20260924" defer></script><script src="assets/js/i18n.js?v=20260924" defer></script><script src="assets/js/main.js?v=20260925-urls" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+    <script src="assets/js/translations.js?v=20260924" defer></script><script src="assets/js/i18n.js?v=20260924" defer></script><script src="assets/js/main.js?v=20260928-emailjs" defer></script>
     <link rel="canonical" href="./">
   </head>
   <body>
@@ -243,6 +244,8 @@
           </div>
           <div class="contact-grid home-contact-grid">
             <form class="form-card home-form-card" data-contact-form>
+              <input type="hidden" name="language">
+              <input type="hidden" name="page_url">
               <div class="home-form-heading">
                 <h3 data-i18n="content.s0378">Send a message</h3>
                 <small><span>*</span> <span class="i18n-text" data-i18n="content.s0379">Required fields</span></small>
@@ -255,10 +258,10 @@
                   <label for="home-email" data-i18n="content.s0382">Email *</label><input placeholder="your.email@domain.com" id="home-email" name="email" type="email" autocomplete="email" required>
                 </div>
                 <div class="field">
-                  <label for="home-affiliation" data-i18n="content.s0384">Institution / organization</label><input placeholder="Your institution (optional)" id="home-affiliation" name="affiliation" data-i18n-placeholder="content.s0385">
+                  <label for="home-affiliation" data-i18n="content.s0384">Institution / organization</label><input placeholder="Your institution (optional)" id="home-affiliation" name="institution" data-i18n-placeholder="content.s0385">
                 </div>
                 <div class="field">
-                  <label for="home-purpose" data-i18n="content.s0386">Contact purpose *</label><select id="home-purpose" name="purpose" required>
+                  <label for="home-purpose" data-i18n="content.s0386">Contact purpose *</label><select id="home-purpose" name="contact_purpose" required>
                     <option value="" data-i18n="content.s0387">Please select</option>
                     <option value="Research collaboration" data-i18n="content.s0388">Research collaboration</option>
                     <option value="Thesis supervision" data-i18n="content.s0389">Thesis supervision</option>
