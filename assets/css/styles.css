@@ -10057,3 +10057,7 @@ body.results-lightbox-open {
   .network-memberships .membership-group-heading:not(:first-child) { grid-column: 3 / 5; margin-top: 0; }
   .network-memberships .membership-card { grid-row: 2; }
 }
+
+/* Allow assistant date ranges to retain their full badge width. */
+.network-students .student-thesis-year { flex-shrink: 0; }
+.network-students .student-status-row { flex-wrap: wrap; }

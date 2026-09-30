@@ -182,7 +182,7 @@ window.FannyTranslations = {
       "s0396": "privacy principles",
       "s0397": "Direct contact",
       "s0401": "Academic researcher",
-      "s0404": "Fanny Petermann-Rocha is a Chilean-Swiss public health researcher and dietitian with international experience in epidemiology, ageing and lifestyle across the life course. She is an Associate Professor at {@institutionalTerms.udpUniversity} and an Affiliate at the {@institutionalTerms.glasgowUniversity}. Her research focuses on modifiable lifestyle factors, chronic disease, sarcopenia and frailty, combining population-based epidemiology, biostatistics and evidence synthesis. She is Deputy Director of ELHOC and a Senior Collaborator of the {@institutionalTerms.globalBurdenDiseaseStudy}.",
+      "s0404": "Fanny Petermann-Rocha is a Chilean-Swiss public health researcher and dietitian with international experience in epidemiology, ageing and lifestyle across the life course. She is an Associate Professor at {@institutionalTerms.udpUniversity}. Her research focuses on modifiable lifestyle factors, chronic disease, sarcopenia and frailty, combining population-based epidemiology, biostatistics and evidence synthesis. She is Deputy Director of ELHOC and a Senior Collaborator of the {@institutionalTerms.globalBurdenDiseaseStudy}.",
       "s0405": "Research areas",
       "s0406": "Public Health",
       "s0407": "Epidemiology",
@@ -351,7 +351,7 @@ window.FannyTranslations = {
       "s1352": "Principal investigator / responsible researcher:",
       "s1353": "Fanny’s role:",
       "s1354": "Principal investigator",
-      "s1355": "Collaborators / supervisors:",
+      "s1355": "Collaborators:",
       "s1356": "Trained medical students; the full team is not listed in the consent form",
       "s1358": "Study of sarcopenia, frailty and associated factors in UDP workers aged 35 to 59. It combines measurements of strength, gait and anthropometry with lifestyle questions to provide evidence for early detection and prevention.",
       "s1359": "Frailty",
@@ -376,7 +376,7 @@ window.FannyTranslations = {
       "s1381": "Oct 2024 – ongoing",
       "s1382": "{@institutionalTerms.borrowFoundation}; award code not reported",
       "s1384": "Research team member",
-      "s1385": "David I. Conway; collaboration between {@institutionalTerms.glasgowUniversity}, {@institutionalTerms.chileUniversity} and {@institutionalTerms.udpUniversity}",
+      "s1385": "University of the Andes",
       "s1387": "Evaluation of Chile's fluoridated milk programme and its relationship with dental caries in rural children and adolescents. It analyses oral health records, trends among 12-year-old schoolchildren and socioeconomic inequalities; it compares the programme with other fluoridation strategies to inform public policy.",
       "s1388": "Fluoridated milk",
       "s1389": "Dental caries",
@@ -1184,7 +1184,7 @@ window.FannyTranslations = {
       "s0396": "principios de privacidad",
       "s0397": "Contacto directo",
       "s0401": "Investigadora académica",
-      "s0404": "Fanny Petermann-Rocha es investigadora chileno-suiza en salud pública y nutricionista, con experiencia internacional en epidemiología, envejecimiento y estilos de vida a lo largo del curso de vida. Es profesora asociada en {@institutionalTerms.udpUniversity} e investigadora afiliada en {@institutionalTerms.glasgowUniversity}. Su investigación se centra en factores modificables del estilo de vida, enfermedades crónicas, sarcopenia y fragilidad, combinando epidemiología poblacional, bioestadística y síntesis de evidencia. Es subdirectora de ELHOC y colaboradora sénior del {@institutionalTerms.globalBurdenDiseaseStudy}.",
+      "s0404": "Fanny Petermann-Rocha es investigadora chileno-suiza en salud pública y nutricionista, con experiencia internacional en epidemiología, envejecimiento y estilos de vida a lo largo del curso de vida. Es profesora asociada en {@institutionalTerms.udpUniversity}. Su investigación se centra en factores modificables del estilo de vida, enfermedades crónicas, sarcopenia y fragilidad, combinando epidemiología poblacional, bioestadística y síntesis de evidencia. Es subdirectora de ELHOC y colaboradora sénior del {@institutionalTerms.globalBurdenDiseaseStudy}.",
       "s0405": "Áreas de investigación",
       "s0406": "Salud pública",
       "s0407": "Epidemiología",
@@ -1353,7 +1353,7 @@ window.FannyTranslations = {
       "s1352": "Investigador principal / responsable:",
       "s1353": "Rol de Fanny:",
       "s1354": "Investigadora responsable",
-      "s1355": "Colaboradores / supervisores:",
+      "s1355": "Colaboradores:",
       "s1356": "Estudiantes de medicina capacitados; equipo completo no enumerado en el consentimiento",
       "s1358": "Estudio de sarcopenia, fragilidad y factores asociados en trabajadores de UDP de 35 a 59 años. Combina mediciones de fuerza, marcha y antropometría con preguntas sobre estilo de vida para aportar evidencia para la detección temprana y la prevención.",
       "s1359": "Fragilidad",
@@ -1378,7 +1378,7 @@ window.FannyTranslations = {
       "s1381": "Oct 2024 – en curso",
       "s1382": "{@institutionalTerms.borrowFoundation}; código de adjudicación no informado",
       "s1384": "Integrante del equipo investigador",
-      "s1385": "David I. Conway; colaboración de {@institutionalTerms.glasgowUniversity}, {@institutionalTerms.chileUniversity} y {@institutionalTerms.udpUniversity}",
+      "s1385": "Universidad de los Andes",
       "s1387": "Evaluación del programa chileno de leche fluorada y su relación con la caries en niños y adolescentes rurales. Analiza registros de salud bucal, tendencias en escolares de 12 años y desigualdades socioeconómicas; compara el programa con otras estrategias de fluoración para orientar políticas públicas.",
       "s1388": "Leche fluorada",
       "s1389": "Caries dental",
@@ -2680,3 +2680,23 @@ window.FannyTranslations.es.seo = {
     "description": "Contacta a Fanny Petermann-Rocha para colaboraciones científicas, proyectos académicos, invitaciones, medios y consultas en salud pública y epidemiología."
   }
 };
+
+window.FannyTranslations.en.content.mainCollaborators = "Main Research Collaborators";
+
+window.FannyTranslations.en.content.physician = "Physician";
+
+window.FannyTranslations.en.content.assistantYears2025to2026 = "Years 2025-2026";
+
+window.FannyTranslations.es.content.mainCollaborators = "Principales colaboradores de investigación";
+
+window.FannyTranslations.es.content.physician = "Médico";
+
+window.FannyTranslations.es.content.assistantYears2025to2026 = "Años 2025-2026";
+
+window.FannyTranslations.en.content.portalRedSaludTitle = "Two in eight older adults may experience loss of muscle mass and strength";
+
+window.FannyTranslations.en.content.portalRedSaludSummary = "Coverage of Fanny Petermann’s research and insights on sarcopenia, highlighting age-related muscle loss and the importance of strength exercise, adequate protein intake and healthy ageing.";
+
+window.FannyTranslations.es.content.portalRedSaludTitle = "Dos de cada ocho adultos mayores podrían presentar pérdida de masa y fuerza muscular";
+
+window.FannyTranslations.es.content.portalRedSaludSummary = "Cobertura sobre la investigación y los aportes de Fanny Petermann en sarcopenia, destacando la pérdida de masa muscular asociada a la edad y la importancia del ejercicio de fuerza, una ingesta adecuada de proteínas y un envejecimiento saludable.";

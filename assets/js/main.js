@@ -330,7 +330,7 @@ document.querySelectorAll("[data-thesis-filters]").forEach((filters) => {
 
     cards.forEach((card) => {
       const statusMatches = activeStatus === "all" || card.dataset.thesisStatus === activeStatus;
-      const yearMatches = activeYear === "all" || card.dataset.thesisYear === activeYear;
+      const yearMatches = activeYear === "all" || card.dataset.thesisYear.split(" ").includes(activeYear);
       const isCollapsedExtra =
         !filtersActive && card.hasAttribute("data-reveal-item") && !revealExpanded;
       const isVisible = statusMatches && yearMatches && !isCollapsedExtra;
