@@ -2700,3 +2700,135 @@ window.FannyTranslations.en.content.portalRedSaludSummary = "Coverage of Fanny P
 window.FannyTranslations.es.content.portalRedSaludTitle = "Dos de cada ocho adultos mayores podrían presentar pérdida de masa y fuerza muscular";
 
 window.FannyTranslations.es.content.portalRedSaludSummary = "Cobertura sobre la investigación y los aportes de Fanny Petermann en sarcopenia, destacando la pérdida de masa muscular asociada a la edad y la importancia del ejercicio de fuerza, una ingesta adecuada de proteínas y un envejecimiento saludable.";
+
+window.FannyTranslations.en.content.addedCollaborator1 = {
+  "role": "Assistant Professor, Nutrition and Dietetics",
+  "institution": "Pontifical Catholic University of Chile",
+  "country": "Chile",
+  "portrait": "Portrait of Paulina Pettinelli Rocha",
+  "profiles": "Academic profiles for Paulina Pettinelli Rocha",
+  "researchgate": "Paulina Pettinelli Rocha on ResearchGate",
+  "orcid": "Paulina Pettinelli Rocha on ORCID"
+};
+
+window.FannyTranslations.en.content.addedCollaborator2 = {
+  "role": "Head of Department of Nutrition and Dietetics; Associate Teaching Professor",
+  "institution": "Pontifical Catholic University of Chile",
+  "country": "Chile",
+  "portrait": "Portrait of Carolina Aguirre Polanco",
+  "profiles": "Academic profiles for Carolina Aguirre Polanco",
+  "researchgate": "Carolina Aguirre Polanco on ResearchGate",
+  "orcid": "Carolina Aguirre Polanco on ORCID"
+};
+
+window.FannyTranslations.en.content.addedCollaborator3 = {
+  "role": "Professor and Head of Research, School of Physical Education",
+  "institution": "Pontifical Catholic University of Valparaíso",
+  "country": "Chile",
+  "portrait": "Portrait of Carlos Cristi-Montero",
+  "profiles": "Academic profiles for Carlos Cristi-Montero",
+  "scholar": "Carlos Cristi-Montero on Google Scholar",
+  "researchgate": "Carlos Cristi-Montero on ResearchGate",
+  "orcid": "Carlos Cristi-Montero on ORCID"
+};
+
+window.FannyTranslations.en.content.addedCollaborator4 = {
+  "role": "Research Associate, Experimental Research Unit, Faculty of Medicine",
+  "institution": "National Autonomous University of Mexico",
+  "country": "Mexico",
+  "portrait": "Portrait of Carlos Luis González-Carballo",
+  "profiles": "Academic profiles for Carlos Luis González-Carballo",
+  "scholar": "Carlos Luis González-Carballo on Google Scholar",
+  "researchgate": "Carlos Luis González-Carballo on ResearchGate",
+  "orcid": "Carlos Luis González-Carballo on ORCID"
+};
+
+window.FannyTranslations.en.content.addedCollaborator5 = {
+  "role": "Professor of Epidemiology; Principal Investigator, Mexico City Prospective Study",
+  "institution": "National Autonomous University of Mexico",
+  "country": "Mexico",
+  "portrait": "Portrait of Jesús Alegre Díaz",
+  "profiles": "Academic profiles for Jesús Alegre Díaz",
+  "researchgate": "Jesús Alegre Díaz on ResearchGate",
+  "orcid": "Jesús Alegre Díaz on ORCID"
+};
+
+window.FannyTranslations.en.content.addedCollaborator6 = {
+  "role": "Researcher, Metabolism and Nutrition Unit",
+  "institution": "High Specialty Regional Hospital of Bajío (IMSS-Bienestar)",
+  "country": "Mexico",
+  "portrait": "Portrait of Evelia Apolinar-Jiménez",
+  "profiles": "Academic profiles for Evelia Apolinar-Jiménez",
+  "researchgate": "Evelia Apolinar-Jiménez on ResearchGate",
+  "orcid": "Evelia Apolinar-Jiménez on ORCID"
+};
+
+window.FannyTranslations.es.content.addedCollaborator1 = {
+  "role": "Profesora asistente, Nutrición y Dietética",
+  "institution": "Pontificia Universidad Católica de Chile",
+  "country": "Chile",
+  "portrait": "Retrato de Paulina Pettinelli Rocha",
+  "profiles": "Perfiles académicos de Paulina Pettinelli Rocha",
+  "researchgate": "Paulina Pettinelli Rocha en ResearchGate",
+  "orcid": "Paulina Pettinelli Rocha en ORCID"
+};
+
+window.FannyTranslations.es.content.addedCollaborator2 = {
+  "role": "Jefa del Departamento de Nutrición y Dietética; profesora asociada docente",
+  "institution": "Pontificia Universidad Católica de Chile",
+  "country": "Chile",
+  "portrait": "Retrato de Carolina Aguirre Polanco",
+  "profiles": "Perfiles académicos de Carolina Aguirre Polanco",
+  "researchgate": "Carolina Aguirre Polanco en ResearchGate",
+  "orcid": "Carolina Aguirre Polanco en ORCID"
+};
+
+window.FannyTranslations.es.content.addedCollaborator3 = {
+  "role": "Profesor y jefe de Investigación, Escuela de Educación Física",
+  "institution": "Pontificia Universidad Católica de Valparaíso",
+  "country": "Chile",
+  "portrait": "Retrato de Carlos Cristi-Montero",
+  "profiles": "Perfiles académicos de Carlos Cristi-Montero",
+  "scholar": "Carlos Cristi-Montero en Google Scholar",
+  "researchgate": "Carlos Cristi-Montero en ResearchGate",
+  "orcid": "Carlos Cristi-Montero en ORCID"
+};
+
+window.FannyTranslations.es.content.addedCollaborator4 = {
+  "role": "Investigador asociado, Unidad de Investigación Experimental, Facultad de Medicina",
+  "institution": "Universidad Nacional Autónoma de México",
+  "country": "México",
+  "portrait": "Retrato de Carlos Luis González-Carballo",
+  "profiles": "Perfiles académicos de Carlos Luis González-Carballo",
+  "scholar": "Carlos Luis González-Carballo en Google Scholar",
+  "researchgate": "Carlos Luis González-Carballo en ResearchGate",
+  "orcid": "Carlos Luis González-Carballo en ORCID"
+};
+
+window.FannyTranslations.es.content.addedCollaborator5 = {
+  "role": "Profesor de Epidemiología; investigador principal del Estudio Prospectivo de la Ciudad de México",
+  "institution": "Universidad Nacional Autónoma de México",
+  "country": "México",
+  "portrait": "Retrato de Jesús Alegre Díaz",
+  "profiles": "Perfiles académicos de Jesús Alegre Díaz",
+  "researchgate": "Jesús Alegre Díaz en ResearchGate",
+  "orcid": "Jesús Alegre Díaz en ORCID"
+};
+
+window.FannyTranslations.es.content.addedCollaborator6 = {
+  "role": "Investigadora, Unidad de Metabolismo y Nutrición",
+  "institution": "Hospital Regional de Alta Especialidad del Bajío (IMSS-Bienestar)",
+  "country": "México",
+  "portrait": "Retrato de Evelia Apolinar-Jiménez",
+  "profiles": "Perfiles académicos de Evelia Apolinar-Jiménez",
+  "researchgate": "Evelia Apolinar-Jiménez en ResearchGate",
+  "orcid": "Evelia Apolinar-Jiménez en ORCID"
+};
+
+window.FannyTranslations.en.content.leonardoCorralRole = "Researcher";
+
+window.FannyTranslations.en.content.leonardoCorralPortrait = "Profile placeholder for Leonardo Corral";
+
+window.FannyTranslations.es.content.leonardoCorralRole = "Investigador";
+
+window.FannyTranslations.es.content.leonardoCorralPortrait = "Imagen de perfil genérica de Leonardo Corral";
