@@ -894,7 +894,7 @@ forms.forEach((form) => {
     {root: '.projects-filters[data-filter-group]', name: 'ui.projects', cards: '[data-project-card]',
       fields: [['ui.projectStatus','filter',['all','current','completed']], ['ui.year','projectYear'], ['ui.location','filter',['international']]]},
     {root: '[data-collaborator-filters]', name: 'ui.collaborators', cards: '[data-collaborator]',
-      fields: [['ui.collaboratorStatus','collaboratorFilter',['all','active','inactive']], ['ui.location','collaboratorFilter',['national','international']]]},
+      fields: [['ui.location','collaboratorFilter',['all','national','international']]]},
     {root: '[data-thesis-filters]', name: 'ui.assistants', cards: '[data-thesis-student]',
       fields: [['ui.assistantStatus','thesisStatus'], ['ui.year','thesisYear']]},
   ];

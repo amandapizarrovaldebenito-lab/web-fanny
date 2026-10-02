@@ -2681,13 +2681,13 @@ window.FannyTranslations.es.seo = {
   }
 };
 
-window.FannyTranslations.en.content.mainCollaborators = "Main Research Collaborators";
+window.FannyTranslations.en.content.mainCollaborators = "Main Active Research Collaborators";
 
 window.FannyTranslations.en.content.physician = "Physician";
 
 window.FannyTranslations.en.content.assistantYears2025to2026 = "Years 2025-2026";
 
-window.FannyTranslations.es.content.mainCollaborators = "Principales colaboradores de investigación";
+window.FannyTranslations.es.content.mainCollaborators = "Principales colaboradores activos de investigación";
 
 window.FannyTranslations.es.content.physician = "Médico";
 
@@ -2832,3 +2832,121 @@ window.FannyTranslations.en.content.leonardoCorralPortrait = "Profile placeholde
 window.FannyTranslations.es.content.leonardoCorralRole = "Investigador";
 
 window.FannyTranslations.es.content.leonardoCorralPortrait = "Imagen de perfil genérica de Leonardo Corral";
+
+window.FannyTranslations.en.content.collaboratorOct2_1 = {
+  "role": "Research team member, Mexico City Prospective Study (MCPS)",
+  "institution": "Mexico City Prospective Study (MCPS) / National Autonomous University of Mexico",
+  "country": "Mexico",
+  "portrait": "Portrait of Leonardo Corral-Robles",
+  "profiles": "Academic profiles for Leonardo Corral-Robles",
+  "orcid": "Leonardo Corral-Robles on ORCID"
+};
+
+window.FannyTranslations.en.content.collaboratorOct2_2 = {
+  "role": "Academic, Department of Nutrition and Dietetics",
+  "institution": "University of Concepción",
+  "country": "Chile",
+  "portrait": "Portrait of Karina Ester Ramírez-Alarcón",
+  "profiles": "Academic profiles for Karina Ester Ramírez-Alarcón",
+  "googlescholar": "Karina Ester Ramírez-Alarcón on Google Scholar",
+  "researchgate": "Karina Ester Ramírez-Alarcón on ResearchGate",
+  "orcid": "Karina Ester Ramírez-Alarcón on ORCID"
+};
+
+window.FannyTranslations.en.content.collaboratorOct2_3 = {
+  "role": "Assistant Professor, Center for Advanced Studies of Maule (CIEAM)",
+  "institution": "Catholic University of Maule",
+  "country": "Chile",
+  "portrait": "Portrait of Jaime Andrés Vásquez-Gómez",
+  "profiles": "Academic profiles for Jaime Andrés Vásquez-Gómez",
+  "googlescholar": "Jaime Andrés Vásquez-Gómez on Google Scholar",
+  "researchgate": "Jaime Andrés Vásquez-Gómez on ResearchGate",
+  "orcid": "Jaime Andrés Vásquez-Gómez on ORCID"
+};
+
+window.FannyTranslations.en.content.gbdSeniorMember = "Senior Member";
+
+window.FannyTranslations.es.content.collaboratorOct2_1 = {
+  "role": "Integrante del equipo de investigación, Estudio Prospectivo de la Ciudad de México (MCPS)",
+  "institution": "Estudio Prospectivo de la Ciudad de México (MCPS) / Universidad Nacional Autónoma de México",
+  "country": "México",
+  "portrait": "Retrato de Leonardo Corral-Robles",
+  "profiles": "Perfiles académicos de Leonardo Corral-Robles",
+  "orcid": "Leonardo Corral-Robles en ORCID"
+};
+
+window.FannyTranslations.es.content.collaboratorOct2_2 = {
+  "role": "Académica, Departamento de Nutrición y Dietética",
+  "institution": "Universidad de Concepción",
+  "country": "Chile",
+  "portrait": "Retrato de Karina Ester Ramírez-Alarcón",
+  "profiles": "Perfiles académicos de Karina Ester Ramírez-Alarcón",
+  "googlescholar": "Karina Ester Ramírez-Alarcón en Google Scholar",
+  "researchgate": "Karina Ester Ramírez-Alarcón en ResearchGate",
+  "orcid": "Karina Ester Ramírez-Alarcón en ORCID"
+};
+
+window.FannyTranslations.es.content.collaboratorOct2_3 = {
+  "role": "Profesor auxiliar, Centro de Estudios Avanzados del Maule (CIEAM)",
+  "institution": "Universidad Católica del Maule",
+  "country": "Chile",
+  "portrait": "Retrato de Jaime Andrés Vásquez-Gómez",
+  "profiles": "Perfiles académicos de Jaime Andrés Vásquez-Gómez",
+  "googlescholar": "Jaime Andrés Vásquez-Gómez en Google Scholar",
+  "researchgate": "Jaime Andrés Vásquez-Gómez en ResearchGate",
+  "orcid": "Jaime Andrés Vásquez-Gómez en ORCID"
+};
+
+window.FannyTranslations.es.content.gbdSeniorMember = "Miembro sénior";
+
+window.FannyTranslations.en.content.networkAdditions = {
+  "redlara": {
+    "name": "Latin American Network of Assisted Reproduction",
+    "type": "Research / scientific collaboration network",
+    "alt": "Logo of Latin American Network of Assisted Reproduction"
+  },
+  "unam": {
+    "name": "National Autonomous University of Mexico",
+    "type": "Academic / research institution",
+    "alt": "Logo of National Autonomous University of Mexico"
+  },
+  "gbd": {
+    "name": "Global Burden of Disease",
+    "type": "Global research collaboration",
+    "alt": "Logo of Global Burden of Disease"
+  },
+  "glis": {
+    "name": "Global Leadership Initiative in Sarcopenia",
+    "type": "Scientific collaboration initiative",
+    "alt": "Logo of Global Leadership Initiative in Sarcopenia"
+  },
+  "registry": "Latin American Registry of Assisted Reproduction",
+  "registryAlt": "REDLARA logo",
+  "role": "Epidemiologist"
+};
+
+window.FannyTranslations.es.content.networkAdditions = {
+  "redlara": {
+    "name": "Red Latinoamericana de Reproducción Asistida",
+    "type": "Red de colaboración científica / de investigación",
+    "alt": "Logo de Red Latinoamericana de Reproducción Asistida"
+  },
+  "unam": {
+    "name": "Universidad Nacional Autónoma de México",
+    "type": "Institución académica / de investigación",
+    "alt": "Logo de Universidad Nacional Autónoma de México"
+  },
+  "gbd": {
+    "name": "Global Burden of Disease",
+    "type": "Colaboración de investigación global",
+    "alt": "Logo de Global Burden of Disease"
+  },
+  "glis": {
+    "name": "Global Leadership Initiative in Sarcopenia",
+    "type": "Iniciativa de colaboración científica",
+    "alt": "Logo de Global Leadership Initiative in Sarcopenia"
+  },
+  "registry": "Registro Latinoamericano de Reproducción Asistida",
+  "registryAlt": "Logo de REDLARA",
+  "role": "Epidemióloga"
+};
