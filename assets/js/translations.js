@@ -119,7 +119,7 @@ window.FannyTranslations = {
       "s0219": "Assistant professor; academic researcher in Kinesiology",
       "s0226": "Assistant professor; full-time academic in Nutrition and Dietetics",
       "s0232": "Emeritus professor",
-      "s0238": "Head of the Reproductive Medicine Laboratory, {@institutionalTerms.lasCondesClinic}",
+      "s0238": "Embryologist, Reproductive Medicine Unit, Clínica MEDS; Adjunct Researcher at Diego Portales University",
       "s0243": "Administrator of the {@institutionalTerms.assistedReproductionRegistry}",
       "s0248": "Academic in Educational Psychology and Special Education",
       "s0255": "Assistant professor, Department of Nutrition",
@@ -1121,7 +1121,7 @@ window.FannyTranslations = {
       "s0219": "Profesora asistente; académica investigadora de Kinesiología",
       "s0226": "Profesora asistente; académica de planta, Nutrición y Dietética",
       "s0232": "Profesor emérito",
-      "s0238": "Jefe del Laboratorio de Medicina Reproductiva, {@institutionalTerms.lasCondesClinic}",
+      "s0238": "Embriólogo, Unidad de Medicina Reproductiva, Clínica MEDS; investigador adjunto de la Universidad Diego Portales",
       "s0243": "Administradora del {@institutionalTerms.assistedReproductionRegistry}",
       "s0248": "Académica de Psicología Educacional y Pedagogía en Educación Especial",
       "s0255": "Profesor asistente, Departamento de Nutrición",
@@ -1184,7 +1184,7 @@ window.FannyTranslations = {
       "s0396": "principios de privacidad",
       "s0397": "Contacto directo",
       "s0401": "Investigadora académica",
-      "s0404": "Fanny Petermann-Rocha es investigadora chileno-suiza en salud pública y nutricionista, con experiencia internacional en epidemiología, envejecimiento y estilos de vida a lo largo del curso de vida. Es profesora asociada en {@institutionalTerms.udpUniversity}. Su investigación se centra en factores modificables del estilo de vida, enfermedades crónicas, sarcopenia y fragilidad, combinando epidemiología poblacional, bioestadística y síntesis de evidencia. Es subdirectora de ELHOC y colaboradora sénior del {@institutionalTerms.globalBurdenDiseaseStudy}.",
+      "s0404": "Fanny Petermann-Rocha es nutricionista e investigadora en salud pública, con experiencia internacional en epidemiología, envejecimiento y estilos de vida a lo largo del curso de vida. Es profesora asociada en {@institutionalTerms.udpUniversity}. Su investigación se centra en factores modificables del estilo de vida, enfermedades crónicas, sarcopenia y fragilidad, combinando epidemiología poblacional, bioestadística y síntesis de evidencia. Es subdirectora de ELHOC y colaboradora sénior del {@institutionalTerms.globalBurdenDiseaseStudy}.",
       "s0405": "Áreas de investigación",
       "s0406": "Salud pública",
       "s0407": "Epidemiología",
@@ -2950,3 +2950,7 @@ window.FannyTranslations.es.content.networkAdditions = {
   "registryAlt": "Logo de REDLARA",
   "role": "Epidemióloga"
 };
+
+window.FannyTranslations.en.content.javierCrosbyInstitutions = "Clínica MEDS / Diego Portales University";
+
+window.FannyTranslations.es.content.javierCrosbyInstitutions = "Clínica MEDS / Universidad Diego Portales";
